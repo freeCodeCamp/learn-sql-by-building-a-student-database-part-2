@@ -3,6 +3,7 @@ config:
   setup:
     commands:
       - sudo cp ~/project/.freeCodeCamp/.bashrc ~
+      - sudo cp ~/project/.freeCodeCamp/reset_files/students.sql ~/project
       - sudo chmod 777 ~/project/.freeCodeCamp/test/pg.log
       - sudo cp ~/project/.freeCodeCamp/.psqlrc ~
       - sudo cp ~/project/.freeCodeCamp/postgresql.conf /etc/postgresql/12/main/postgresql.conf
