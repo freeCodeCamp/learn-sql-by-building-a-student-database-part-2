@@ -774,7 +774,7 @@ In your student info script, add `echo` statement at the bottom like the other t
 - Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
 - You previously used `SELECT * FROM courses WHERE course NOT ILIKE '%A%' AND course LIKE '% %';` in the psql prompt
 - Practice the query in the psql prompt to make sure it's getting what you want
-- The conditions should be `last_name LIKE '%sa%' OR last_name LIKE %r_`
+- The conditions should be `last_name ILIKE '%sa%' OR last_name LIKE %r_`
 - If you run your script, the last echo statement should print:
 ```sh
 Gilbert
@@ -783,7 +783,7 @@ Saunders
 Hilpert
 Hassanah
 ```
-- Add `echo "$($PSQL "SELECT last_name FROM students WHERE last_name LIKE '%sa' OR last_name LIKE '%r_'")"` to the bottom of the `student_info.sh` file
+- Add `echo "$($PSQL "SELECT last_name FROM students WHERE last_name ILIKE '%sa%' OR last_name LIKE '%r_'")"` to the bottom of the `student_info.sh` file
 
 ## 1700. ./student_info.sh
 
