@@ -1506,9 +1506,9 @@
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
             "You previously used `SELECT * FROM courses WHERE course NOT ILIKE '%A%' AND course LIKE '% %';` in the psql prompt",
             "Practice the query in the psql prompt to make sure it's getting what you want",
-            "The conditions should be `last_name LIKE '%sa%' OR last_name LIKE %r_`",
+            "The conditions should be `last_name ILIKE '%sa%' OR last_name LIKE %r_`",
             "If you run your script, the last echo statement should print:\n```sh\nGilbert\nSavage\nSaunders\nHilpert\nHassanah\n```",
-            "Add `echo \"$($PSQL \"SELECT last_name FROM students WHERE last_name LIKE '%sa' OR last_name LIKE '%r_'\")\"` to the bottom of the `student_info.sh` file"
+            "Add `echo \"$($PSQL \"SELECT last_name FROM students WHERE last_name ILIKE '%sa%' OR last_name LIKE '%r_'\")\"` to the bottom of the `student_info.sh` file"
           ]
         }
       ]
@@ -2921,7 +2921,7 @@
             "Join them with the join that only shows rows if they have a value in the foreign key column of the other table",
             "The previous query was: `SELECT * FROM majors INNER JOIN students ON majors.major_id = students.major_id;`",
             "You want to use an `INNER JOIN` with the two tables",
-            "Enter `SELECT * FROM majors INNER JOIN students ON majors.major_id = students.major_id;` in the psql prompt",
+            "Enter `SELECT * FROM majors FULL JOIN students ON majors.major_id = students.major_id;` in the psql prompt",
             "Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already"
           ]
         }
