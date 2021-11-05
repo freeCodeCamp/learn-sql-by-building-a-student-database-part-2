@@ -145,7 +145,7 @@
           "id": "50.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "2dd9d5f1c97505c9044098404bace6e96d4ba6dd"
@@ -171,7 +171,7 @@
           "id": "60.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "b34a29bc72aff7ac945b5daf6ac7148e2a4d83f7"
@@ -198,7 +198,7 @@
           "id": "70.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "0815a449eb9367db55a43c147aa9384fecf7372c"
@@ -224,7 +224,7 @@
           "id": "80.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "fb6f43648f571e2b65d3b1c10931ea5f6cb5ce79"
@@ -251,7 +251,7 @@
           "id": "90.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "6a6c5f5b288e1bbbd93b4610e3a090a896dedbe3"
@@ -278,7 +278,7 @@
           "id": "1220.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../.bash_history"
             ],
             "commits": [
               "17d25e527523350094632d2e1491391d27cc55fd"
@@ -304,7 +304,7 @@
           "id": "1230.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../.bash_history"
             ],
             "commits": [
               "7739ed01ca26e0df41b99a6331c16846441499e6"
@@ -329,7 +329,7 @@
           "id": "1240.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "9d0c6d5c14c0a40b5ec875ee8f9890584b87e813"
@@ -353,7 +353,7 @@
           "id": "1250.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "330daf8a7ce73cfd637b5c0483da94d5dbd2de11"
@@ -378,7 +378,7 @@
           "id": "1260.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "e5de9ceaa976ee49211c2a9b3ef24a9abcd57126"
@@ -403,7 +403,7 @@
           "id": "1265.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "../.bash_history"
             ],
             "commits": [
               "e5ffa1398205a6a661b7e2ffb514856038a81228"
@@ -428,7 +428,7 @@
           "id": "1270.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "73bbff9c19eca6d75f81da14c8fdac5148e4947d"
@@ -451,7 +451,7 @@
           "id": "1280.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "176b6c034c5a98e11cc6e45b288452aee72be37e"
@@ -476,7 +476,7 @@
           "id": "1290.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "093d395f586a1e20fda8d29f1a39a833412f0550"
@@ -501,7 +501,7 @@
           "id": "1300.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "f1b42f8dc8d07e7b5c81ee2fb9d0e1a529813c6c"
@@ -527,7 +527,7 @@
           "id": "1310.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "46ccb1d551deb2bcccf64c046e9e20ac335a6811"
@@ -636,7 +636,7 @@
           "id": "1360.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "b4f2dd4ef62828d68858b2f7d8cfefa894540b83"
@@ -664,7 +664,7 @@
           "id": "1370.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "../.bash_history"
             ],
             "commits": [
               "5b2d36f573d0010835029e04d1973f17ea31e1a0"
@@ -689,7 +689,7 @@
           "id": "1380.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "f1daa5100876b4881ae94a363451dbf41ce4af17"
@@ -715,7 +715,7 @@
           "id": "1390.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "68ae7cf92035b701e06fb9f83a3d74edeb67ef67"
@@ -740,7 +740,7 @@
           "id": "1400.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "bff76c023478e4c9416e07ffacad056f38a7cd0a"
@@ -767,7 +767,7 @@
           "id": "1410.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "9a784ffdc16f8017c7dfb04694720d1f21c091c0"
@@ -881,7 +881,7 @@
           "id": "1450.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "c79c5459b2fc033fa065ee01a6a2bb8ac940f5d2"
@@ -910,7 +910,7 @@
           "id": "1460.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "../.bash_history"
             ],
             "commits": [
               "d92305ee574136107214a42fb77dacdc0650c52f"
@@ -935,7 +935,7 @@
           "id": "1470.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "ad2b866057bd37bf3870fcd03448fd01204e3686"
@@ -961,7 +961,7 @@
           "id": "1480.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "94d792a241186b9673fa04e12a3864ba9626b3b7"
@@ -986,7 +986,7 @@
           "id": "1490.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "f7c7de87bac0568bc0962f0305c6fc20890d8a33"
@@ -1014,7 +1014,7 @@
           "id": "1500.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "c88e6db75a3a12866090dcb0c5f46c740717b993"
@@ -1122,7 +1122,7 @@
           "id": "1540.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "b4a4c8b53731205dc9fe95533911ddc88d43a077"
@@ -1150,7 +1150,7 @@
           "id": "1550.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "../.bash_history"
             ],
             "commits": [
               "c18601c3ef1644067cff488dcfc49f65f7083343"
@@ -1175,7 +1175,7 @@
           "id": "1560.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "4906894834238cc1cad4b0d4753dbedf3ee8bda3"
@@ -1333,7 +1333,7 @@
           "id": "1620.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "99df74e62ec353bde1861ced625d9c4c0525bcf3"
@@ -1360,7 +1360,7 @@
           "id": "1630.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "6a6af70c2ba6c83cf4157372c23362639a37865a"
@@ -1387,7 +1387,7 @@
           "id": "1640.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "3152275127162475809971e7f7ea78b2c7707c44"
@@ -1495,7 +1495,7 @@
           "id": "1690.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "cc118fcda1d71927fb5bc41b6b007b6d2833a8dd"
@@ -1523,7 +1523,7 @@
           "id": "1700.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "../.bash_history"
             ],
             "commits": [
               "2a696a057a7d2b45a1ba85c9c34020c5e24dae4d"
@@ -1548,7 +1548,7 @@
           "id": "1710.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "d66f4000d803adfe65992c6577a1129c3b0f687e"
@@ -1574,7 +1574,7 @@
           "id": "1715.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "634cd56118b9fdc2b1930fef3f2930c07ce7e6c0"
@@ -1599,7 +1599,7 @@
           "id": "1720.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "d4bdf8c7e2ad454802b338532d6a036bcc29767a"
@@ -1626,7 +1626,7 @@
           "id": "1730.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "b874ed20bb2cad9f7c00966ba3f9643c749e0067"
@@ -1735,7 +1735,7 @@
           "id": "1770.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "13dbfefe1d19bdb84aaf6a595915d01d4a2ea3c2"
@@ -1765,7 +1765,7 @@
           "id": "1780.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "../.bash_history"
             ],
             "commits": [
               "854ab88a2c5866519e5beaec5f4d93a745bf4308"
@@ -1816,7 +1816,7 @@
           "id": "1800.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "6e52afffafea815ff1361e2292066eb9a68bdf14"
@@ -1843,7 +1843,7 @@
           "id": "1810.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "d496247bc49e26df440d6f8d7b0c21cae050572f"
@@ -1949,7 +1949,7 @@
           "id": "1840.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "17acf2b1caa791e2a3b1b7445f3fabc38577e86c"
@@ -1976,7 +1976,7 @@
           "id": "1850.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "../.bash_history"
             ],
             "commits": [
               "666e078594bdd74327968e43442ae861757fd3b8"
@@ -2001,7 +2001,7 @@
           "id": "1860.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "eb9cb31a2073b08862e1c5fb2d80a8a27ce2ac26"
@@ -2051,7 +2051,7 @@
           "id": "1880.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "5524a30ef59f5198b1ebd4dae9f8c61c5915682c"
@@ -2076,7 +2076,7 @@
           "id": "1890.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "7569a93ffe3ec5ae1dc2fd005eecbda46270f440"
@@ -2102,7 +2102,7 @@
           "id": "1900.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "24c1a3313f6b84da8263b036f6bc55d3ea2863ba"
@@ -2209,7 +2209,7 @@
           "id": "1940.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "9ea14d4286ab21c5a8efb02f1c0d53a63916a194"
@@ -2236,7 +2236,7 @@
           "id": "1950.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "../.bash_history"
             ],
             "commits": [
               "f90724d1ad6c406d3386af25a33bd03d7487a420"
@@ -2261,7 +2261,7 @@
           "id": "1960.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "55217ec3e122b4fe871d34d3eccb146443b3ef43"
@@ -2478,7 +2478,7 @@
           "id": "2040.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "96eed293c8aa536ba833743ae2cdc01d2ab081ef"
@@ -2504,7 +2504,7 @@
           "id": "2050.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "e56dfe1247d7f3f71bb12798e8e10418b1aad913"
@@ -2532,7 +2532,7 @@
           "id": "2060.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "adbe516a1e52be2736f457414011cca73cace81d"
@@ -2640,7 +2640,7 @@
           "id": "2090.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "cb9a13a93f42cb0ce2ed28bb8325ffe709913519"
@@ -2667,7 +2667,7 @@
           "id": "2100.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "../.bash_history"
             ],
             "commits": [
               "f962d37b1e6d8af5187a66918781281b6e358d8f"
@@ -2692,7 +2692,7 @@
           "id": "2110.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "7e359cab09e0d01796f332bd5781f11322174127"
@@ -3106,7 +3106,7 @@
           "id": "2250.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "b196923223e09d2ef5da4edc9d5a0b72806c95ea"
@@ -3134,7 +3134,7 @@
           "id": "2260.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "44dc7d9795606a8988b03f0b2375c678934ce708"
@@ -3162,7 +3162,7 @@
           "id": "2265.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "74e95a843e45ded8254bcad64d11bb09d490ffa8"
@@ -3271,7 +3271,7 @@
           "id": "2310.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "3744b5ca43d4f16d230577960a485580c9526c59"
@@ -3298,7 +3298,7 @@
           "id": "2320.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "../.bash_history"
             ],
             "commits": [
               "0b53fc3b46b0ae815e21b6784b507ff08752e6ce"
@@ -3323,7 +3323,7 @@
           "id": "2330.1",
           "setup": {
             "watchers": [
-              "../pg.log"
+              "./student_info.sh"
             ],
             "commits": [
               "b43c6c12e871f6d7c905dcb3962c4315c6f7c711"
@@ -3374,7 +3374,7 @@
           "id": "2350.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "b0d81d10cb25bf7856441b02abeb120d273252be"
@@ -3400,7 +3400,7 @@
           "id": "2360.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "389e12ff0f4700c33bc41aa182a635e0f5a64212"
@@ -3426,7 +3426,7 @@
           "id": "2370.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "d524a50b42156745b81fa970e3b79fd37f59a3d0"
@@ -3452,7 +3452,7 @@
           "id": "2390.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
               "a36f2b94a7aa851de2dcf510925f87b559a7f4ef"
@@ -3476,7 +3476,7 @@
           "id": "2400.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
               "1b15d68773ef1c64ef83367627918ac4b072c93e"
@@ -3501,6 +3501,14 @@
       "steps": [
         {
           "id": "2410.1",
+          "setup": {
+            "watchers": [
+              "../pg.log"
+            ],
+            "commits": [
+              "b28f6da271aee70efdf89a31b165ba513b60c3b9"
+            ]
+          },
           "content": "You may need to adjust the terminal size to align the output. What you're seeing is every unique combination of rows in the database. Students with a major are listed multiple times, one for each course included in the major. The majors without any students are there along with the courses for them. The students without a major are included, they have no courses and are only listed once. You can join as many tables together as you want. Join the last table to the previous command to get the names of the courses with all this info.",
           "hints": [
             "The previous query was `SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id);`",
@@ -3520,6 +3528,14 @@
       "steps": [
         {
           "id": "2420.1",
+          "setup": {
+            "watchers": [
+              "./student_info.sh"
+            ],
+            "commits": [
+              "9a6549baeacc8c7223f5bed64866ed4442aa142a"
+            ]
+          },
           "content": "Same amount of rows, but you get the course names now. In your script, add the command to print the suggested info.",
           "hints": [
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
@@ -3539,6 +3555,14 @@
       "steps": [
         {
           "id": "2430.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "83ac2b5385856ceae6c0d6f11e4ac8e31fa59f41"
+            ]
+          },
           "content": "Run the script to see courses described.",
           "hints": [
             "Run your `student_info.sh` script by executing it",
@@ -3556,6 +3580,14 @@
       "steps": [
         {
           "id": "2440.1",
+          "setup": {
+            "watchers": [
+              "./student_info.sh"
+            ],
+            "commits": [
+              "fdb0b9b56bcf037aa0f5793464a9025d142f2573"
+            ]
+          },
           "content": "Last one. Add a command that prints `List of courses, in alphabetical order, with only one student enrolled:`.",
           "hints": [
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
@@ -3574,6 +3606,14 @@
       "steps": [
         {
           "id": "2450.1",
+          "setup": {
+            "watchers": [
+              "./student_info.sh"
+            ],
+            "commits": [
+              "09e2be8e8c91e7a1d06f7b34bb2284eb3caf7429"
+            ]
+          },
           "content": "Go for it.",
           "hints": [
             "Add a command at the bottom of the script to print the suggested information",
@@ -3599,6 +3639,14 @@
       "steps": [
         {
           "id": "2460.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "96e27248fe55e2262fdf465f693ed50005cb4264"
+            ]
+          },
           "content": "This is the last step, you have done really well. Run the script one last time. :wave:",
           "hints": [
             "Run your `student_info.sh` script by executing it",
