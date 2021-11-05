@@ -1,6 +1,6 @@
 # Learn SQL by Building a Student Database: Part 2
 
-> Welcome to Part two of the SQL Lessons!
+> Welcome to Part 2 of the Build a Student Database Lessons!
 
 ## 10. Start the Terminal
 
