@@ -1,26 +1,17 @@
 {
   "version": "0.0.1",
   "summary": {
-    "title": "Learn SQL by Building a Student Database",
-    "description": "> Welcome to the SQL Lessons!"
+    "title": "Learn SQL by Building a Student Database: Part 2",
+    "description": "> Welcome to Part 2 of the Build a Student Database Lessons!"
   },
   "config": {
     "setup": {
       "commands": [
-        "sudo cp ~/project/.freeCodeCamp/.bashrc ~",
-        "sudo cp ~/project/.freeCodeCamp/reset_files/students.sql ~/project",
-        "sudo chmod 777 ~/project/.freeCodeCamp/test/pg.log",
-        "sudo cp ~/project/.freeCodeCamp/.psqlrc ~",
-        "sudo cp ~/project/.freeCodeCamp/postgresql.conf /etc/postgresql/12/main/postgresql.conf",
-        "sudo cp ~/project/.freeCodeCamp/pg_hba.conf /etc/postgresql/12/main/pg_hba.conf",
-        "sudo chown -R postgres:postgres /var/lib/postgresql/12/main",
-        "sudo service postgresql stop",
-        "cd .freeCodeCamp && npm install",
-        "sudo service postgresql start",
-        "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\""
+        "sudo bash .freeCodeCamp/reset.sh",
+        "cd .freeCodeCamp && npm install"
       ],
       "commits": [
-        "97f9bd7570b495137fc79848782090559512b008"
+        "40843c0635a1fecd7e110ddaf8b0eeaa2e6e977a"
       ]
     },
     "testRunner": {
@@ -60,7 +51,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "6b8f9d3a02ea095edf1dca0df0e935cedec04ed7"
+              "f12fb2df64079d2fcf1f375e9f37091488863da0"
             ]
           },
           "content": "**The first thing you need to do is start the terminal.** Do that by clicking the \"hamburger\" menu at the top left of the screen, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello SQL` into the terminal and press enter.",
@@ -81,13 +72,13 @@
           "id": "20.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "7fa97f1a3014d4b368099a4c580d3d6feb5e7c67"
+              "c5ad5fd2c67af497d7ca1b6a8abaeadfe487ee33"
             ]
           },
-          "content": "You are started with two `.csv` files with info about your computer science students. You should take a look at them. The top row in each file has titles, and the rest are values for those titles. You will be adding all that info to a PostgreSQL database. Log into the psql interactive terminal with `psql --username=freecodecamp --dbname=postgres` to get started.",
+          "content": "In Part 1 of this tutorial, you created a `students` database and then a script to insert information about your computer science students into it. Log into the psql interactive terminal with `psql --username=freecodecamp --dbname=postgres` to see if it's here.",
           "hints": [
             "Type `psql --username=freecodecamp --dbname=postgres` into the terminal and press enter"
           ]
@@ -104,15 +95,175 @@
           "id": "30.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "39561fdc67753040cbb3f8f7809098e62604e2ce"
+              "97bf0c479be4b8302c5f978c49675bc080ff4e38"
             ]
           },
-          "content": "View the existing databases with the `\\l` shortcut command to see what's here.",
+          "content": "List the databases.",
           "hints": [
-            "Type `\\l` into the psql prompt and press enter"
+            "Use the **l**ist shortcut command",
+            "It's the `\\l` command",
+            "Type `\\l` into the psql prompt and press enter",
+            "Enter `psql --username=freecodecamp --dbname=postgres` in the terminal to log into the psql prompt if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "title": "rebuild database",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "40.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "17b7546e638815bbf28e5d3ff8e2d25651824deb"
+            ]
+          },
+          "content": "Your database isn't here. You can use the `.sql` file you created at the end of Part 1 to rebuild it. I recommend \"splitting\" the terminal. You can do that by clicking the \"hamburger\" menu at the top left of the window, going to the \"Terminal\" menu, and clicking \"Split Terminal\". Once you've done that, enter `psql -U postgres < students.sql` in it to rebuild the database.",
+          "hints": [
+            "Enter the suggested command in the terminal",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "title": "\\l",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "50.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "2dd9d5f1c97505c9044098404bace6e96d4ba6dd"
+            ]
+          },
+          "content": "A lot of stuff happened in the terminal. That looks promising. In the psql prompt, view the databases again.",
+          "hints": [
+            "Use the **l**ist shortcut command",
+            "It's the `\\l` command",
+            "Type `\\l` into the psql prompt and press enter",
+            "Enter `psql --username=freecodecamp --dbname=postgres` in the terminal to log into the psql prompt if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "title": "\\c students",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "60.1",
+          "setup": {
+            "watchers": [
+              "./student_info.sh"
+            ],
+            "commits": [
+              "b34a29bc72aff7ac945b5daf6ac7148e2a4d83f7"
+            ]
+          },
+          "content": "There's your `students` database. Connect to it.",
+          "hints": [
+            "Use the **c**onnect shortcut command with the database name after it",
+            "It's the `\\c` command",
+            "Here's an example `\\c <database>`",
+            "Type `\\c students` into the psql prompt and press enter",
+            "Enter `psql --username=freecodecamp --dbname=postgres` in the terminal to log into the psql prompt if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "title": "\\d",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "70.1",
+          "setup": {
+            "watchers": [
+              "./student_info.sh"
+            ],
+            "commits": [
+              "0815a449eb9367db55a43c147aa9384fecf7372c"
+            ]
+          },
+          "content": "Now that you're connected. Display the tables and relations that are here to see if it's all correct.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "It's the `\\d` command",
+            "Type `\\d` into the psql prompt and press enter",
+            "Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80",
+      "title": "\\d students",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "80.1",
+          "setup": {
+            "watchers": [
+              "./student_info.sh"
+            ],
+            "commits": [
+              "fb6f43648f571e2b65d3b1c10931ea5f6cb5ce79"
+            ]
+          },
+          "content": "That all looks right. View the details of the `students` table to make sure the stucture is right.",
+          "hints": [
+            "Use the **d**isplay shortcut command with the table name after it",
+            "It's the `\\d` command",
+            "Here's an example: `\\d <table_name>`",
+            "Type `\\d students` into the psql prompt and press enter",
+            "Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "90",
+      "title": "select * from students",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "90.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "6a6c5f5b288e1bbbd93b4610e3a090a896dedbe3"
+            ]
+          },
+          "content": "Looks good. Make sure all the data is in the table, as well.",
+          "hints": [
+            "View all the data in the `students` table",
+            "Use the `SELECT` and `FROM` keywords with `*` to view all the columns",
+            "Here's an example: `SELECT <columns> FROM <table_name>`;",
+            "Type `SELECT * FROM students;` into the psql prompt",
+            "Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already"
           ]
         }
       ]
@@ -127,16 +278,17 @@
           "id": "1220.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./student_info.sh"
             ],
             "commits": [
-              "d54d23ac6d96f9cb2214aa7caed687a057f69b46"
+              "17d25e527523350094632d2e1491391d27cc55fd"
             ]
           },
-          "content": "Next, you are going to make a script to print info about your students. In the terminal, use `touch` to create a `student_info.sh` file.",
+          "content": "The data is all there. You should take a look at the details of the other tables and the data in them to make sure they look good. When you are done, use `touch` in the bash terminal to create `student_info.sh`. You are going to make a script to print info about your students.",
           "hints": [
             "Here's an example: `touch <filename>`",
             "Enter `touch student_info.sh` in the terminal",
+            "The bash terminal, not the psql one",
             "Make sure you are in the `project` folder first"
           ]
         }
@@ -152,13 +304,13 @@
           "id": "1230.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./student_info.sh"
             ],
             "commits": [
-              "5b512e14ae365bd2fa41fa355c3a4876cf4339ef"
+              "7739ed01ca26e0df41b99a6331c16846441499e6"
             ]
           },
-          "content": "Give your file executable permissions.",
+          "content": "Give your new file executable permissions.",
           "hints": [
             "It's the `chmod` command with the `+x` flag",
             "Here's an example: `chmod +x <filename>`",
@@ -177,16 +329,16 @@
           "id": "1240.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "f582ba71ea1bc050d1e029e2e98ae20e9be27328"
+              "9d0c6d5c14c0a40b5ec875ee8f9890584b87e813"
             ]
           },
-          "content": "Add shebang that uses bash to your new script.",
+          "content": "Add a shebang that uses bash at the top of your new script.",
           "hints": [
             "The shebang you want is `#!/bin/bash`",
-            "Add the text, `#!/bin/bash` to your `student_info.sh` file"
+            "Add `#!/bin/bash` to your `student_info.sh` file"
           ]
         }
       ]
@@ -201,10 +353,10 @@
           "id": "1250.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "a5c4f30c67a9f2686432dad13986f1d98eeac2db"
+              "330daf8a7ce73cfd637b5c0483da94d5dbd2de11"
             ]
           },
           "content": "Below the shebang, add a comment that says `Info about my computer science students from students database`.",
@@ -226,10 +378,10 @@
           "id": "1260.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "b086d9f5d935aa48985675f691ca83ef987cdf01"
+              "e5de9ceaa976ee49211c2a9b3ef24a9abcd57126"
             ]
           },
           "content": "In the new script, use `echo` to print `~~ My Computer Science Students ~~`. Use the `-e` flag with it to put a new line at the beginning and end of the text.",
@@ -251,10 +403,10 @@
           "id": "1265.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
-              "e176b5c6860d3ebd125e0fd19849bfabef66ebe9"
+              "e5ffa1398205a6a661b7e2ffb514856038a81228"
             ]
           },
           "content": "Run the script to make sure it's working.",
@@ -276,16 +428,15 @@
           "id": "1270.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "0637e38bdee65d98923b716e70cf7bb89e5bd2ff"
+              "73bbff9c19eca6d75f81da14c8fdac5148e4947d"
             ]
           },
-          "content": "You will want to query the database again to get info about the students to display. Add the same `PSQL` variable from your other script.",
+          "content": "You will want to query the database again to get info about the students to display. Add the same `PSQL` variable you use in your `insert_data.sh` script. It looked like this: `PSQL=\"psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c\"`",
           "hints": [
-            "Make sure to use all the same flags in the same order",
-            "Add the following to the bottom of the `student_info.sh` file:\n```sh\nPSQL=\"psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c\"\n```"
+            "Add the suggested variable at the bottom of the `student_info.sh` file"
           ]
         }
       ]
@@ -300,10 +451,10 @@
           "id": "1280.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "ef231127d2f8ecb99e34614eb852bea0801f757d"
+              "176b6c034c5a98e11cc6e45b288452aee72be37e"
             ]
           },
           "content": "Below the PSQL variable you just added, use `echo` to print `First name, last name, and GPA of students with a 4.0 GPA:`. Use the `-e` flag to put a new line at the beginning of the sentence.",
@@ -325,10 +476,10 @@
           "id": "1290.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "86d15f2f20ec6ea629b70e97c3c5c39d1361fffb"
+              "093d395f586a1e20fda8d29f1a39a833412f0550"
             ]
           },
           "content": "You will want to print what that sentence is asking for. You should know how to make that query, but lets practice a little first. `SQL` stands for \"Structured Query Language\". It's the language you have been using to manage your relational databases. In the psql prompt, view all the data in the students table like you have done many times.",
@@ -350,10 +501,10 @@
           "id": "1300.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "225bea7c6dba12afdf527b939eb3ad09ef91ea85"
+              "f1b42f8dc8d07e7b5c81ee2fb9d0e1a529813c6c"
             ]
           },
           "content": "You should look at the column titles that were returned. The `*` gets all columns in a table with your query. You can return specific columns by putting the column name in the query instead of `*`. In the psql prompt, view just the `first_name` column from the `students` table.",
@@ -376,10 +527,10 @@
           "id": "1310.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "24fdaa64640821052c1d0a27379d27db7a379b51"
+              "46ccb1d551deb2bcccf64c046e9e20ac335a6811"
             ]
           },
           "content": "Just the `first_name` column was returned that time. You can specify as many columns you want returned by separating them with commas. View the `first_name`, `last_name` and `gpa` columns from the `students` table.",
@@ -403,10 +554,10 @@
           "id": "1320.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "b65640536aadc363dce9569b1afa83f5ff05a920"
+              "c57dfc27a608a8d2bb1f5d87f150b1089718ebd6"
             ]
           },
           "content": "You can return only rows you want by adding `WHERE <condition>` to your query. A condition can consist of a column, an operator, and a value. Use one of these to view the same columns as before but only rows `WHERE gpa < 2.5`.",
@@ -430,10 +581,10 @@
           "id": "1330.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "3ee93a0c8778c295f0ea6675a6f3b8bd02fd59dd"
+              "af95844a19f80bea1f59d637fe70880bc1d42cea"
             ]
           },
           "content": "The `<` only return rows where the `gpa` column was less than `2.5`. Some other operators are: `<`, `>`, `<=`, `>=`. View the same columns, but only rows for students with a `gpa` greater than or equal to `3.8`.",
@@ -458,10 +609,10 @@
           "id": "1340.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "068b276cddde3ee9c92809833c879bdf0121029c"
+              "980da4f4c3762e9bd20cbf9118c7e18043884ea3"
             ]
           },
           "content": "That only returned students with a GPA of 3.8 or better. There's equal (`=`) and not equal (`!=`) operators as well. View the same columns for students that don't have a 4.0 gpa.",
@@ -485,10 +636,10 @@
           "id": "1360.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "dad07ad480aa1e6ae232046de926424cf7c593a5"
+              "b4f2dd4ef62828d68858b2f7d8cfefa894540b83"
             ]
           },
           "content": "The right query will get you only the data you are looking for. Back in your `student_info.sh` file, add an `echo` command to the bottom that prints what the sentence above it asks for. Place double quotes around it like this: `echo \"$($PSQL \"<query_here>\")\"`. This will make it so the output isn't all on one line.",
@@ -513,10 +664,10 @@
           "id": "1370.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
-              "47338e33215408a1804af953f773f2d9086d7cb3"
+              "5b2d36f573d0010835029e04d1973f17ea31e1a0"
             ]
           },
           "content": "Run the script to see your students with the highest GPA's.",
@@ -538,10 +689,10 @@
           "id": "1380.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "b7a3448db143cbf88ea3809909c6a672350a3af2"
+              "f1daa5100876b4881ae94a363451dbf41ce4af17"
             ]
           },
           "content": "Add another `echo` statement at the bottom of the script. Make it print `All course names whose first letter is before 'D' in the alphabet:`. Put a new line in front of it like the first sentence.",
@@ -564,10 +715,10 @@
           "id": "1390.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "57acfff1be8d392c85653425d844323eae579290"
+              "68ae7cf92035b701e06fb9f83a3d74edeb67ef67"
             ]
           },
           "content": "Practice first. In the psql prompt, view all the data in the `majors` table.",
@@ -589,10 +740,10 @@
           "id": "1400.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "c98fecc9d7992a941704a989810ba6f2808383e8"
+              "bff76c023478e4c9416e07ffacad056f38a7cd0a"
             ]
           },
           "content": "The operators you used with numbers in the last section can be used on text as well. Use the `=` to view all majors named `Game Design`. Don't forget that You need single quotes around text values.",
@@ -616,10 +767,10 @@
           "id": "1410.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "029df9c25d928c23b6dc4da765efe3cad6c8ce70"
+              "9a784ffdc16f8017c7dfb04694720d1f21c091c0"
             ]
           },
           "content": "Next, view all the rows not equal to `Game Design`.",
@@ -644,10 +795,10 @@
           "id": "1420.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "bc654ade9dbd6473014c43b359c4633b272dfc85"
+              "ad75ea964047f24a23e3eff4abfc5a3fc356b15f"
             ]
           },
           "content": "Use the greater than operator to see majors that come after it alphabetically.",
@@ -673,10 +824,10 @@
           "id": "1430.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "1ca1961e988dd9d302242eb5e2ede8b479836e6a"
+              "d830aa32dc2e042f2889367049118e89614bab0a"
             ]
           },
           "content": "`Game Design` was not included in the results because it is not `> 'Game Design'`. Try it with the greater than or equal to operator.",
@@ -702,10 +853,10 @@
           "id": "1440.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "27a74d45894715ebc8b37f1305bfe5c174a0262a"
+              "3a7ebef100f031d9faacc05b68274c53407e4820"
             ]
           },
           "content": "It included `Game Design` in the results that time. So if you want to see results that start with a `G` or after, you could use `major >= 'G'`. View the majors that come before `G`.",
@@ -730,10 +881,10 @@
           "id": "1450.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "3489c332b28d7e6cb71235cba83c6aa0bc2686cc"
+              "c79c5459b2fc033fa065ee01a6a2bb8ac940f5d2"
             ]
           },
           "content": "In your script, add an `echo` at the bottom to print the suggested info like you did before. Make sure to use double quotes where needed.",
@@ -759,10 +910,10 @@
           "id": "1460.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
-              "dfcac0a22e0d4f59e758e70424ea2ab7be087b66"
+              "d92305ee574136107214a42fb77dacdc0650c52f"
             ]
           },
           "content": "Run the script to see what course names come before the letter `D`.",
@@ -784,10 +935,10 @@
           "id": "1470.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "04786675c8cd2cb40b4c337c1a387344be102693"
+              "ad2b866057bd37bf3870fcd03448fd01204e3686"
             ]
           },
           "content": "Looks like there is five of them. Add another sentence like the others that says: `First name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:`",
@@ -810,10 +961,10 @@
           "id": "1480.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "1633ac48187e732a7673fbaad4a3dad1bcea5c1d"
+              "94d792a241186b9673fa04e12a3864ba9626b3b7"
             ]
           },
           "content": "To find that, start by using the psql prompt to view all the data in the `students` table.",
@@ -835,10 +986,10 @@
           "id": "1490.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "2b489a4e71e44215aa807c713d1f904bc80283fb"
+              "f7c7de87bac0568bc0962f0305c6fc20890d8a33"
             ]
           },
           "content": "It returned 31 rows. Use the same command, but only return the rows for students whose last name comes before `M` in the alphabet.",
@@ -863,10 +1014,10 @@
           "id": "1500.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "01fc85e8930249624c158e2daa5b5c1dc22df0be"
+              "c88e6db75a3a12866090dcb0c5f46c740717b993"
             ]
           },
           "content": "That returned 18 rows. You can use multiple conditions after `WHERE` with `AND` or `OR`, among others. Just add the keyword and another condition. In the psql prompt, use the same command as before, but add an `OR` to also return rows of students with a 3.9 GPA.",
@@ -892,10 +1043,10 @@
           "id": "1510.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "e1171b729212a1218779248cb22bbd66c5b83c18"
+              "80e6be843e10d3a15667c6339c8b499e7dc31395"
             ]
           },
           "content": "It showed rows where one of the conditions was true, there was one more than last time. Enter the previous command, but use `AND` to view only students that meet both conditions.",
@@ -918,10 +1069,10 @@
           "id": "1520.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "4772d28edbecfea9ea1a0f9e5f657dc8acb68c26"
+              "6d0408369acb4e8943b16e5e3766b34109a3cafd"
             ]
           },
           "content": "Now it only shows rows where both conditions are true, one person. Enter the previous command, but add a third condition of `OR gpa < 2.3`.",
@@ -945,10 +1096,10 @@
           "id": "1530.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "50199e194a5a07180b90f693d7ce5e9dfe2f7cde"
+              "626fd97fbaafba3e0ed87944fb89b2374d6bf9af"
             ]
           },
           "content": "This showed all students whose GPA is less than 2.3 because the final `OR` condition was true for them. It didn't matter what their last name started with. You can group conditions together with parenthesis like this: `WHERE <condition_1> AND (<condition_2> OR <condition_2>)`. This would only return rows where `<condition_1>` is true and one of the others is true. View students whose last name is before `M` that have a GPA of 3.9 or less than 2.3.",
@@ -971,10 +1122,10 @@
           "id": "1540.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "f69334f6d18b429ca4e144618dba2e3d4032c7de"
+              "b4a4c8b53731205dc9fe95533911ddc88d43a077"
             ]
           },
           "content": "Two students meet those conditions. Back in the student info file, add an echo command at the bottom to print the suggested rows.",
@@ -999,10 +1150,10 @@
           "id": "1550.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
-              "78f44a4911f63f37dcbefc25e15159f7b799c066"
+              "c18601c3ef1644067cff488dcfc49f65f7083343"
             ]
           },
           "content": "Run the script to see the results.",
@@ -1024,10 +1175,10 @@
           "id": "1560.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "338d6e9f52e4866fb10480b91899df3fccfee6d8"
+              "4906894834238cc1cad4b0d4753dbedf3ee8bda3"
             ]
           },
           "content": "Moving along. Add another `echo` command, like the others, with a sentence that says: `Last name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:`",
@@ -1050,10 +1201,10 @@
           "id": "1570.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "e7856640d7d07ffccfaed9c03fbdef980703513b"
+              "901aa7246d21c94aa673ac589ce5a4115549be19"
             ]
           },
           "content": "Start by viewing everything from the `courses` table in the psql prompt to see how you might be able to find this out.",
@@ -1075,10 +1226,10 @@
           "id": "1580.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "3ed9449b41f5794cb173c090d9d112627fd935f7"
+              "a630aba6d08b6e32d4d36078eb3a224ea13fcea9"
             ]
           },
           "content": "There's a few that contain the word `Algorithms`. You can use `LIKE` to find patterns in text like this: `WHERE <column> LIKE '<pattern>'`. An underscore (`_`) in a pattern will return rows that have any character in that spot. View the rows in this table with a course name that matches the pattern `'_lgorithms'`.",
@@ -1100,10 +1251,10 @@
           "id": "1590.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "0fdefac07fce2bec27af45328a6cd92bd6714b7b"
+              "ef5ae7cef294795d9f3da6141599c93fc9726855"
             ]
           },
           "content": "That pattern matched only rows that had exactly one character, followed by `lgorithms`. Another pattern character is `%`. It means anything can be there. To find names that start with `W`, you could use `W%`. View the courses that end in `lgorithms`.",
@@ -1127,10 +1278,10 @@
           "id": "1600.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "f45c3e61d2325da79cd11316bfd828004a6cc216"
+              "0ff51775cfcd53b07302cbe7b832f892d7bfba23"
             ]
           },
           "content": "It found two that time. Try viewing courses that start with `Web`.",
@@ -1154,10 +1305,10 @@
           "id": "1610.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "7ead8c2e772cd07f6b8ae5743634351952588581"
+              "e12890a1c69be905a04e294111d8e240fd84678f"
             ]
           },
           "content": "Combine the two pattern matching characters to show courses that have a second letter of `e`.",
@@ -1182,10 +1333,10 @@
           "id": "1620.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "376f9d8804208174274bd39c5745d2009136c22a"
+              "99df74e62ec353bde1861ced625d9c4c0525bcf3"
             ]
           },
           "content": "Nice job! Try viewing the courses with a space in their names.",
@@ -1209,10 +1360,10 @@
           "id": "1630.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "cacbd01afd7a23ccc8163539cd5a7823cf94513a"
+              "6a6af70c2ba6c83cf4157372c23362639a37865a"
             ]
           },
           "content": "There they are. You can use `NOT LIKE` to find things that don't match a pattern. View courses that don't contain a space.",
@@ -1236,10 +1387,10 @@
           "id": "1640.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "9e6acb5fa8a062f36fb64ec6d176f5cbd2c6604b"
+              "3152275127162475809971e7f7ea78b2c7707c44"
             ]
           },
           "content": "Five courses without a space. Try finding the ones that contain an `A`.",
@@ -1263,10 +1414,10 @@
           "id": "1650.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "1d2b6ffa601326c5a260d55ff451210e12c98997"
+              "516de6e851c7bb28b584f39c6376b694e8387066"
             ]
           },
           "content": "6 rows. This showed all the courses with a capital `A`. `ILIKE` will ignore the case of the letters when matching. Use it to see the courses with an `A` or `a`.",
@@ -1290,10 +1441,10 @@
           "id": "1670.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "d94f09f34d7b8e8375c7d7e25f040b094787c68d"
+              "9ed1c2ad27be8d67ab681938d4b2226a7454e9c9"
             ]
           },
           "content": "It found 11 rows that time. You can put `NOT` in front of `ILIKE` as well. Use it to see the courses that don't contain an `A` or `a`.",
@@ -1317,10 +1468,10 @@
           "id": "1680.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "9938596e5809186d5fcd741480a1bb47baebd54e"
+              "172bb3aad7db44a086d663b003e83324d1fb453c"
             ]
           },
           "content": "You combine these like any other conditions. View the courses that don't have a capital or lowercase `A` and have a space.",
@@ -1344,10 +1495,10 @@
           "id": "1690.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "21a3a81ea171e730886cd702b4d6160665df11f5"
+              "cc118fcda1d71927fb5bc41b6b007b6d2833a8dd"
             ]
           },
           "content": "In your student info script, add `echo` statement at the bottom like the other to print the results of the suggested query.",
@@ -1372,10 +1523,10 @@
           "id": "1700.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
-              "28b5063505d9b3fcbe77e96758597ce56d3d0911"
+              "2a696a057a7d2b45a1ba85c9c34020c5e24dae4d"
             ]
           },
           "content": "Run the script to see the results.",
@@ -1397,10 +1548,10 @@
           "id": "1710.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "d84429d37d5b352f2e1b1dfa06e65ca5a7ac1b44"
+              "d66f4000d803adfe65992c6577a1129c3b0f687e"
             ]
           },
           "content": "Looks like five students meet those conditions. Add another `echo` command at the bottom, like the others. Make this one say: `First name, last name, and GPA of students who have not selected a major and either their first name begins with 'D' or they have a GPA greater than 3.0:`",
@@ -1423,10 +1574,10 @@
           "id": "1715.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "4c159b266fb426696ad39ccff8e4d17a84b7f8a0"
+              "634cd56118b9fdc2b1930fef3f2930c07ce7e6c0"
             ]
           },
           "content": "Start by looking at all the data in the students table.",
@@ -1448,10 +1599,10 @@
           "id": "1720.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "d7eb8148500fb9adc1fd0f37d73d9e7dce6ca45b"
+              "d4bdf8c7e2ad454802b338532d6a036bcc29767a"
             ]
           },
           "content": "All the fields that are empty or blank are `null`. You can access them using `IS NULL` as a condition like this: `WHERE <column> IS NULL`. View the students who don't have a GPA.",
@@ -1475,10 +1626,10 @@
           "id": "1730.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "d586d50d9d582b5e9bb123292d135d77ba4d5ca4"
+              "b874ed20bb2cad9f7c00966ba3f9643c749e0067"
             ]
           },
           "content": "Inversely, you can use `IS NOT NULL` to see rows that aren't null. View all the info on students that do have a GPA.",
@@ -1502,10 +1653,10 @@
           "id": "1740.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "d990d5f1c2c3d34e7ea6c66fc7e741a81d1c489a"
+              "39c9ed6131be64e5637238332ecee4347dfc4e8f"
             ]
           },
           "content": "View all the info on students who haven't chosen a major.",
@@ -1530,10 +1681,10 @@
           "id": "1750.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "70a9ab82414facadec593479f200d3d1ffc507a8"
+              "441640b51352e0ce765e01f78d7d67dd4468343e"
             ]
           },
           "content": "View the students who don't have a major, but don't include students without a GPA.",
@@ -1557,10 +1708,10 @@
           "id": "1760.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "33eb3cdc32bb15727a177a8bfb0ad0756cce26b8"
+              "0d28c0136c86f6d5c3da40a63a6303686ba1fda3"
             ]
           },
           "content": "One more. View the students who don't have a major and gpa.",
@@ -1584,10 +1735,10 @@
           "id": "1770.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "35a7529b799a88a4b9fd6d967296f5b2142b3ab2"
+              "13dbfefe1d19bdb84aaf6a595915d01d4a2ea3c2"
             ]
           },
           "content": "In your script, add an `echo` command at the bottom to print the results the sentence is looking for.",
@@ -1614,10 +1765,10 @@
           "id": "1780.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
-              "d49e52991a2e271909a42989a5f286c67989eaa3"
+              "854ab88a2c5866519e5beaec5f4d93a745bf4308"
             ]
           },
           "content": "Run the script to see the students that meet those conditions.",
@@ -1642,7 +1793,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "ff9b63c7f049d09310ba3b9d7149c1992a265ec4"
+              "4cfe8a02f4fa3dbfb3b868547ffd65fea1ac838a"
             ]
           },
           "content": "There's three of them. Add another sentence, like the others that says `Course name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':`",
@@ -1665,10 +1816,10 @@
           "id": "1800.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "26349450539f7b286f328bcc5c9aff857c1dfb3d"
+              "6e52afffafea815ff1361e2292066eb9a68bdf14"
             ]
           },
           "content": "You can specify the order you want your results to be in by adding `ORDER BY <column_name>` at the end of a query. In the psql prompt, view all the info in the `students` table in order by the GPA's.",
@@ -1692,10 +1843,10 @@
           "id": "1810.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "0f52a97a7c55f8d561cee378486b7db803730d50"
+              "d496247bc49e26df440d6f8d7b0c21cae050572f"
             ]
           },
           "content": "That put the lowest GPA's at the top. When using `ORDER BY`, it will be in ascending (`ASC`) order by default. Add `DESC` (descending) at the end of the last query to put the highest ones at the top.",
@@ -1718,10 +1869,10 @@
           "id": "1820.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "5f40dfe08d95f13fd5d548ed36bd0231d0c9d055"
+              "bcdf203a9df4936ec78561c52aa6a64eb9fd885c"
             ]
           },
           "content": "Now, the highest GPA's are at the top. You can add more columns to the order by separating them with a comma like this: `ORDER BY <column_1>, <column_2>`. Any matching values in the first ordered column will then be ordered by the next. View all the student info with the highest GPA's at the top, and in alphabetical order by `first_name` if the GPA's match.",
@@ -1744,10 +1895,10 @@
           "id": "1830.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "033346ad86645b6240faed87dee112aaf71294aa"
+              "0c5885cfbdc7a1e2bc07f51bceb635a84294cb7e"
             ]
           },
           "content": "Many times, you only want to return a certain number of rows. You can add `LIMIT <number>` at the end of the query to only get the amount you want. View the students in the same order as the last command, but only return the first 10 rows.",
@@ -1770,10 +1921,10 @@
           "id": "1835.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "b274eb5a1faa58ec94db71163721be4029c7b03c"
+              "8179743be56754c1c77dddf0bd25493a9f0317d2"
             ]
           },
           "content": "The order of the keywords in your query matters. You cannot put `LIMIT` before `ORDER BY`, or either of them before `WHERE`. View the same number of students, in the same order, but don't get the ones who don't have a GPA.",
@@ -1798,10 +1949,10 @@
           "id": "1840.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "374099ab1ffe6802612c326fe2f40e5c265a46f6"
+              "17acf2b1caa791e2a3b1b7445f3fabc38577e86c"
             ]
           },
           "content": "In your script, add the `echo` command to print the rows the sentence is asking for.",
@@ -1825,10 +1976,10 @@
           "id": "1850.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
-              "7ef7848e6b37b8432419d5ec2551094f4c911ef7"
+              "666e078594bdd74327968e43442ae861757fd3b8"
             ]
           },
           "content": "Run the script to see the courses.",
@@ -1850,10 +2001,10 @@
           "id": "1860.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "d24f5ef85ace15b7be5c7ac7d91a5c7b4f6f221d"
+              "eb9cb31a2073b08862e1c5fb2d80a8a27ce2ac26"
             ]
           },
           "content": ":sunglasses: Add another `echo` command at the bottom of the script like the others. Make this one say, `Average GPA of all students rounded to two decimal places:`",
@@ -1876,10 +2027,10 @@
           "id": "1870.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "30819bde76035f271dbf6361b647602dcc6de2fc"
+              "b36aceaef2887fe89711fbe779f85e20abe821fe"
             ]
           },
           "content": "There's a number of mathematic functions to use with numerical columns. One of them is `MIN`, you can use it when selecting a column like this: `SELECT MIN(<column>) FROM <table>`. It will find the lowest value in the column. In the psql prompt, view the lowest value in the `gpa` column of the `students` table.",
@@ -1900,10 +2051,10 @@
           "id": "1880.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "e734404add3329be7b7729b6627f262f8aaaab8f"
+              "5524a30ef59f5198b1ebd4dae9f8c61c5915682c"
             ]
           },
           "content": "Another one is `MAX`, use it to see the largest `gpa` of the same table.",
@@ -1925,10 +2076,10 @@
           "id": "1890.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "a803d7bcb9bb58a07f976e61cc2574adbebb98fb"
+              "7569a93ffe3ec5ae1dc2fd005eecbda46270f440"
             ]
           },
           "content": "In the same fashion, use a `SUM` function find out what all the values of the `major_id` column in the `students` table add up to.",
@@ -1951,10 +2102,10 @@
           "id": "1900.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "d8e7e51097a3a295344678428aa8eef8a1ae1386"
+              "24c1a3313f6b84da8263b036f6bc55d3ea2863ba"
             ]
           },
           "content": "`AVG` will give you the average of all the values in a column. Use it to see the average of the same column.",
@@ -1978,10 +2129,10 @@
           "id": "1910.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "03de259439cad51e4f485b16773e3d32e60f78ec"
+              "7a0103cc6c3b92e4d50ddd858305bf4279a6f61d"
             ]
           },
           "content": "You can round decimals up or down to the nearest whole number with `CEIL` and `FLOOR`, respectively. Use `CEIL` to round the average `major_id` up to the nearest whole number. Here's an example: `CEIL(<number_to_round>)`.",
@@ -2005,10 +2156,10 @@
           "id": "1920.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "ad989d19ecbb75ab2264167db8b7e30e9d21d0fb"
+              "7383bcdb34c2804c3abe5e2a23fbc3ee8d3f7b6a"
             ]
           },
           "content": "Or, you can round a number to the nearest whole number with `ROUND`. Use it to round the average of the `major_id` column to the nearest whole number.",
@@ -2032,10 +2183,10 @@
           "id": "1930.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "ed3affad26f388a954a10b78c45514f9206e21bc"
+              "222c560186efbe508ba2496626772516564fe5fb"
             ]
           },
           "content": "You can round to a specific number of decimal places by adding a comma and number to `ROUND`, like this: `ROUND(<number_to_round>, <decimals_places>)`. Round the average of the `major_id` to five decimal places.",
@@ -2058,10 +2209,10 @@
           "id": "1940.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "3ba833db54967aed38f28efdb4ce94a23d0b1947"
+              "9ea14d4286ab21c5a8efb02f1c0d53a63916a194"
             ]
           },
           "content": "You should be able to find what your script is asking for now. Add the command to print it.",
@@ -2085,10 +2236,10 @@
           "id": "1950.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
-              "b351d60abf54c0aea60647faa9c170c409ac8be4"
+              "f90724d1ad6c406d3386af25a33bd03d7487a420"
             ]
           },
           "content": "Run the script to see the average GPA of all your students.",
@@ -2110,10 +2261,10 @@
           "id": "1960.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "0108515fedd48b3a231f71e578f5329d76692d90"
+              "55217ec3e122b4fe871d34d3eccb146443b3ef43"
             ]
           },
           "content": "They're doing pretty good. Add another command to print `Major ID, total number of students in a column named 'number_of_students', and average GPA rounded to two decimal places in a column name 'average_gpa', for each major ID in the students table having a student count greater than 1:`",
@@ -2136,10 +2287,10 @@
           "id": "1970.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "ba69ef92a20eb1f928f3be0e9c8fbed724374b5f"
+              "04cdf02a9ab1b7a835ce09ec7e36b67fd1ebd8aa"
             ]
           },
           "content": "Another function is `COUNT`. You can use it like this: `COUNT(<column>)`. It will tell you how many entries are in a table for the column. Try it out in the psql prompt by using `COUNT(*)` to see how many majors there are.",
@@ -2163,10 +2314,10 @@
           "id": "1980.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "2bb86a58cb81231f01af67d3a309ae6d1d02ecfc"
+              "b8af9b018a548e8f4513b7727afe7614891e4cae"
             ]
           },
           "content": "Using the same method, check how many students you have.",
@@ -2191,10 +2342,10 @@
           "id": "1990.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "95feceebf8b54a6f0aaa235e8e4e6212423b7816"
+              "e05b11e584e9452b45ec236b38f1504f6af186d8"
             ]
           },
           "content": "Using `*` like that told you how many total rows are in the table. View the count of the `major_id` column in the `students` table to see how many of your students have picked a major.",
@@ -2218,10 +2369,10 @@
           "id": "2000.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "09544bd0f94a25753218b2bdd43ff037db046771"
+              "234f7adcfd31aa5e67b1d0cdb45e9e7339cf5a68"
             ]
           },
           "content": "Using `major_id` didn't count the `null` values in that column. 23 students have a major. `DISTINCT` is a function that will show you only unique values. You can use it like this: `DISTINCT(<column>)`. View the unique `major_id` values in the `students` table.",
@@ -2245,10 +2396,10 @@
           "id": "2010.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "f388776db4ccbb01962fc0de1c91904af53c1ad9"
+              "28db1f28d39a4c4f4f19ccdc79228d97be28fc28"
             ]
           },
           "content": "There's six unique `major_id` values in the `students` table. You can get the same results with `GROUP BY`. Here's an example of how to use it: `SELECT <column> FROM <table> GROUP BY <column>`. Use this method to view the unique `major_id` values in the `students` table again.",
@@ -2273,10 +2424,10 @@
           "id": "2020.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "56389519c54fe324d1b101be81683bdbb1a547b8"
+              "4bfcaafd67817f0c1da68e2f91dfa8a563ee7e35"
             ]
           },
           "content": "The output was the same as `DISTINCT`, but with `GROUP BY` you can add any of the aggregate functions (`MIN`, `MAX`, `COUNT`, etc) to it to find more information. For instance, if you wanted to see how many students were in each major you could use `SELECT COUNT(*) FROM students GROUP BY major_id`. View the `major_id` column **and** number of students in each `major_id`.",
@@ -2300,10 +2451,10 @@
           "id": "2030.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "9ef29ef5372df858bf93f937036e171b79e6c25a"
+              "0419da705d6d9f45ae701a00584c9210bab64f51"
             ]
           },
           "content": "When using `GROUP BY`, any columns in the `SELECT` area must be included in the `GROUP BY` area. Other columns must by used with any of the aggregate functions (`MAX`, `AVG`, `COUNT`, etc). View the unique `major_id` values with `GROUP BY` again, but see what the lowest GPA is in each of them.",
@@ -2327,10 +2478,10 @@
           "id": "2040.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "a652e82a0f7a12d9a3215760aa5148bf1381afb4"
+              "96eed293c8aa536ba833743ae2cdc01d2ab081ef"
             ]
           },
           "content": "Nice job. Enter the same query, but add a column that shows you the highest GPA in each major as well.",
@@ -2353,10 +2504,10 @@
           "id": "2050.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "ebc844a4908fa6a9910a06420a0375e79243e7a5"
+              "e56dfe1247d7f3f71bb12798e8e10418b1aad913"
             ]
           },
           "content": "Another option with `GROUP BY` is `HAVING`. You can add it at the end like this: `SELECT <column> FROM <table> GROUP BY <column> HAVING <condition>`. The condition must be an aggregate function with a test. An example to might be to use `HAVING COUNT(*) > 0` to only show what whatever column is grouped that have at least one row. Use `HAVING` to only show rows from the last query that have a maximum GPA of 4.0.",
@@ -2381,10 +2532,10 @@
           "id": "2060.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "778e1c6af9106b72091d4b3e4fdd1476f77d0cd9"
+              "adbe516a1e52be2736f457414011cca73cace81d"
             ]
           },
           "content": "Two of your majors have at least one student with a 4.0 GPA. Looking at the results, the column is named `min`. You can rename a column with `AS` like this: `SELECT <column> AS <new_column_name>` Enter the same command, but rename the `min` column to `min_gpa`.",
@@ -2408,10 +2559,10 @@
           "id": "2070.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "ad60e674bd753901741ea9a571d865aafd5bba1a"
+              "0659e0ca82e9dfab9296479fa30f0396671e464b"
             ]
           },
           "content": "Now the column has a better name. Enter the same command, but rename the `max` column to `max_gpa` as well.",
@@ -2435,10 +2586,10 @@
           "id": "2075.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "603d9795056a74d2e2a24b93788c15b8eeda056c"
+              "c9bd81419256b592afd1c914299c9b648a85fe96"
             ]
           },
           "content": "That's more descriptive. View the `major_id` and number of students in each `major_id` in a column named `number_of_students`.",
@@ -2462,10 +2613,10 @@
           "id": "2080.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "81eb68db65a1607f42c0dd3c2dd3fab195278874"
+              "33a9628e23afee8ebea9d313a32219e3d31767c4"
             ]
           },
           "content": "Use `HAVING` with the last query to only show the rows with less than eight students in the major.",
@@ -2489,10 +2640,10 @@
           "id": "2090.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "6f0ae79cd54434ab056888723c66769572e9762f"
+              "cb9a13a93f42cb0ce2ed28bb8325ffe709913519"
             ]
           },
           "content": "Well done. Back in your script, add the command the print the suggested results.",
@@ -2516,10 +2667,10 @@
           "id": "2100.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
-              "8e2defc18879cdd055fbdce25350d1177793f0b6"
+              "f962d37b1e6d8af5187a66918781281b6e358d8f"
             ]
           },
           "content": "Run the script to see the output.",
@@ -2541,10 +2692,10 @@
           "id": "2110.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "9d27da71a6b3a9beab512847f9f407a3291e74af"
+              "7e359cab09e0d01796f332bd5781f11322174127"
             ]
           },
           "content": "Add an echo command to your script like the others that prints `List of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case insensitive 'ma':`",
@@ -2567,10 +2718,10 @@
           "id": "2120.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "edd8d38b7182a497ef38745e00b45e9b72a961a5"
+              "cdb21f2667e673b844b7bbdd2bb74f1632c0490c"
             ]
           },
           "content": "The `majors` and `students` table are linked with the `major_id` foreign key. If you want to see the name of a major that a student is taking, you need to `JOIN` the two tables into one. Here's an example of how to do that:\n`SELECT * FROM <table_1> FULL JOIN <table_2> ON <table_1>.<foreign_key_column> = <table_2>.<foreign_key_column>;`\n\nIn the psql prompt, join the two tables together with the above method.",
@@ -2592,10 +2743,10 @@
           "id": "2130.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "50f657693446a580021b8d3547f23ef8d156674e"
+              "99fd02c8095bf5a735fa98b7dfd8b6799d848db7"
             ]
           },
           "content": "It's showing all the columns from both tables, the two `major_id` columns are the same in each row for the ones that have it. You can see that there are some students without a major, and some majors without any students. The `FULL JOIN` you used will include **all** rows from both tables, whether or not they have a row using that foreign key in the other. From there, you could use any of the previous methods to narrow down, group, order, etc. Use a `LEFT JOIN` to join the same two tables in the same way.",
@@ -2619,10 +2770,10 @@
           "id": "2140.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "a6c4f2321592b452ed27a9a356f18e9ee5cdd400"
+              "6378b5644102a05258aa4955e56a9aa2e831619e"
             ]
           },
           "content": "There's a few less rows than the last query. In the `LEFT JOIN` you used, the `students` table was the left table since it was on the left side of the `JOIN`. `majors` was the right table. A `LEFT JOIN` gets all rows from the left table, but only rows from the right table that are linked to from the left one. Looking at the data, you can see that every student was returned, but the majors without any students were not. Join the same two tables with a `RIGHT JOIN` this time.",
@@ -2646,10 +2797,10 @@
           "id": "2150.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "92168d8f8b57acaa14e3af4b03c512b4680fb546"
+              "28c74c53920909436f6e40f9e3c7c2543f6ada0e"
             ]
           },
           "content": "The right join showed all the rows from the right table (`majors`), but only rows from the left table (`students`) if they have a major. There's one more type you should know about. Join the two tables with an `INNER JOIN`.",
@@ -2673,10 +2824,10 @@
           "id": "2160.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "047f18f3edfcecb5ad6c6c5b90aef22990182b8a"
+              "769aa10074dcc4e49afc7199c40911c2b8b1828b"
             ]
           },
           "content": "The `INNER JOIN` only returned students if they have a major and majors that have a student. In other words, it only returned rows if they have a value in the foreign key column (`major_id`) of the opposite table. You should know a little about the four main types of joins now. Try using a `LEFT JOIN` to show **all the majors** but only students that have a major.",
@@ -2701,10 +2852,10 @@
           "id": "2170.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "ae8525ef212d50b25074ce8da9b5ce71506cd7c1"
+              "23794817cc6041cd631ebdaefcea011d53fa9e46"
             ]
           },
           "content": "Excellent. All the majors are there. Next, use the appropriate join to show only students that are enrolled in a major, and only majors that have a student enrolled in it.",
@@ -2730,10 +2881,10 @@
           "id": "2180.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "fddc82f8046a33328ba3f329049fcbaced840c01"
+              "2b3f739fc94a4edadaf4e5e3db51bca4b95a1c19"
             ]
           },
           "content": ":thumbsup: Try using a right join to show all students but only majors if a student is enrolled in it.",
@@ -2758,10 +2909,10 @@
           "id": "2190.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "ae6c5c7a4478a87988b309c91f06efdccc0bbc04"
+              "79e53770a4e081e6c56f280b80e627fe8ffe0fed"
             ]
           },
           "content": "That showed all the students since it was the right table of the `RIGHT JOIN`. Use the appropriate join with the same two table to show all rows in both tables whether they have a value in the foreign key column or not.",
@@ -2786,10 +2937,10 @@
           "id": "2200.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "d8801f520518a143c7bba5cf479482ad7a7bcd28"
+              "7d987ff667e3d397528acc01776c73926e755ccb"
             ]
           },
           "content": "Lets do some more experiments with joins. Say you wanted to find a list of majors that students are taking. Use the most efficient `JOIN` to only get rows from the tables you need to find that.",
@@ -2815,10 +2966,10 @@
           "id": "2210.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "0a8975473c6841354e644dc96ffa6394bdc00a88"
+              "00d91eca4667e9e05f746e0605080fa9a2a41bbd"
             ]
           },
           "content": "Good. To get the list, you don't need all the columns, though. Enter the same command, but just get the column you need.",
@@ -2842,10 +2993,10 @@
           "id": "2220.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "fb0527063223da1f8b0ae425af3da77a9989b5bd"
+              "15823acbd54cfc8a0311548add2ee41f6783be7a"
             ]
           },
           "content": "You also don't want any duplicates. Use `DISTINCT` to only return the unique ones to see the list of majors who have students.",
@@ -2870,10 +3021,10 @@
           "id": "2230.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "5f47e545ed2785ca5e93085fc4775d07e3766f11"
+              "542d86907e447a69f79f7595ce60b5db233d78d3"
             ]
           },
           "content": "There's your list of majors that students are taking :smile: Next, say you wanted a list of majors that students aren't taking. Use the most efficient join to get only the rows needed.",
@@ -2899,10 +3050,10 @@
           "id": "2240.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "6f638a9b09cd87e7ee8c3e98fdaf7974e289f9c7"
+              "9b83bf403f510a1038d7daad57c03515ca2cc1ad"
             ]
           },
           "content": "That got you all the majors, you can see the ones that don't have any students. Add a `WHERE` condition to only see the majors without students, use `student_id` in it's condition.",
@@ -2928,10 +3079,10 @@
           "id": "2245.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "864b3f16e9cd284a47d9552c8da15e36e38b7299"
+              "b1fbff1ce7c72a10c4a2da9fc76bae4344817313"
             ]
           },
           "content": "Now you only have the rows you need. Only get the columns you need with it to see the list of majors without students.",
@@ -2955,10 +3106,10 @@
           "id": "2250.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "9f6b7f65cf028f8e6a0d73d9dee82a44d8e34ee8"
+              "b196923223e09d2ef5da4edc9d5a0b72806c95ea"
             ]
           },
           "content": "You're doing great. Next, use the most efficient join to get the rows needed if you were asked to get the first name, last name, major, and GPA of students who are taking Data Science or have a gpa of 3.8 or greater.",
@@ -2983,10 +3134,10 @@
           "id": "2260.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "69577d58e9790d81c3131e54c5de4987819dfe07"
+              "44dc7d9795606a8988b03f0b2375c678934ce708"
             ]
           },
           "content": "Enter the same command, but use `WHERE` to only get the students that meet the requirements. As a reminder, the goal was to find students who are taking Data Science or have a gpa of 3.8 or greater.",
@@ -3011,10 +3162,10 @@
           "id": "2265.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "1279c9dc7c9df93da9866868e42b6818e1087900"
+              "74e95a843e45ded8254bcad64d11bb09d490ffa8"
             ]
           },
           "content": "Now, you have narrowed it down the rows you are looking for. Enter the same command, but only get the columns you need. There was four of them, the students first name, last name, their major, and GPA. Get them in that order.",
@@ -3038,10 +3189,10 @@
           "id": "2270.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "c1a6a452ef34ccf1c230403b3b42fdfc2c8356ae"
+              "8786336432ee0b40b9356f2836047dd05c2cbfe6"
             ]
           },
           "content": "From there, you could put them in a specific order if you wanted or limit the results to a certain number among other things. Lastly, use the join to get the rows needed if you were asked to get the first name and major for students whose `first_name`, or the `major`, contains `ri`.",
@@ -3065,10 +3216,10 @@
           "id": "2280.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "ef9bd11c2f9570776f1a9de4ba21f42a424a87db"
+              "6fb39b74c0f22c18c36ff770853d6c0ce5f1cced"
             ]
           },
           "content": "Add a `WHERE` to the previous query so you only get the rows you need. The rows you wanted were the ones with a first name or major containing `ri`.",
@@ -3094,10 +3245,10 @@
           "id": "2290.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "da7340c6a7da97c58aa48ac68960b3c91f4e114a"
+              "d1f462f323423568286730f085b45da9e442d716"
             ]
           },
           "content": "Finally, you only wanted to display the `first_name` and `major` columns. Enter the previous query, but only get the columns you need.",
@@ -3120,10 +3271,10 @@
           "id": "2310.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "db9c401553c8ee360a276ffc91bfdac033381b87"
+              "3744b5ca43d4f16d230577960a485580c9526c59"
             ]
           },
           "content": "In your script, add the command to print what the sentence is asking for.",
@@ -3147,10 +3298,10 @@
           "id": "2320.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "../pg.log"
             ],
             "commits": [
-              "833f74a5735815bc0fe16caf95fba58304a0cfa7"
+              "0b53fc3b46b0ae815e21b6784b507ff08752e6ce"
             ]
           },
           "content": "Run the script to see the majors described.",
@@ -3172,10 +3323,10 @@
           "id": "2330.1",
           "setup": {
             "watchers": [
-              "./student_info.sh"
+              "../pg.log"
             ],
             "commits": [
-              "6e8025baadb11d5552791c24539c10fd92b013fa"
+              "b43c6c12e871f6d7c905dcb3962c4315c6f7c711"
             ]
           },
           "content": ":smile: Almost done. In your script, add a command to print this sentence like the others: `List of unique courses, in reverse alphabetical order, that no student or 'Obie Hilpert' is taking:`",
@@ -3198,10 +3349,10 @@
           "id": "2340.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../pg.log"
             ],
             "commits": [
-              "62c271559b4e8367a2b1a7909e499771c495b574"
+              "a940d06baef247befb7045684bebd0649c7fcc47"
             ]
           },
           "content": "Lets go over a few more things before you figure out how to see the courses a student is taking. Start by doing a `FULL JOIN` on your `students` and `majors` tables.",
@@ -3223,10 +3374,10 @@
           "id": "2350.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "834d7e9b987c49a63fcf45f7d9d3fcd18638c3b1"
+              "b0d81d10cb25bf7856441b02abeb120d273252be"
             ]
           },
           "content": "If you look at the column names, it shows two `major_id` columns. One from the `students` table and one from the `majors` table. If you were to try and query it using `major_id`, you would get an error. You would need to specify what table you want the column from like this: `<table>.<column>`. Enter the same join but only get the `major_id` column from the `students` table.",
@@ -3249,10 +3400,10 @@
           "id": "2360.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "a3f4543776d90860681b468eeb3e9dea1c786662"
+              "389e12ff0f4700c33bc41aa182a635e0f5a64212"
             ]
           },
           "content": "Earlier, you used `AS` to rename columns. You can use it to rename tables, or give them aliases, as well. Here's an example: `SELECT * FROM <table> AS <new_name>;`. Enter the same query you just entered, but rename the `majors` table to `m`. Anywhere the `majors` table is referenced, you will need to use `m` instead of `majors`.",
@@ -3275,10 +3426,10 @@
           "id": "2370.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "cea31951d47419a0d7f66e78e430e7e87aee5e53"
+              "d524a50b42156745b81fa970e3b79fd37f59a3d0"
             ]
           },
           "content": "This doesn't affect the output. It can just make some queries easier to read. Enter the same query, but rename the `students` table to `s` as well.",
@@ -3301,10 +3452,10 @@
           "id": "2390.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./student_info.sh"
             ],
             "commits": [
-              "95b5e4e65fb1aab7f809c559d98e79b02436bf7b"
+              "a36f2b94a7aa851de2dcf510925f87b559a7f4ef"
             ]
           },
           "content": "There's a shortcut keyword, `USING` to join tables if the foreign key column has the same name in both tables. Here's an example: `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>);`. Use this method to see **all** the columns in the `students` and `majors` table. Don't use any aliases.",
@@ -3325,10 +3476,10 @@
           "id": "2400.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "../.bash_history"
             ],
             "commits": [
-              "078d6482b96e2cd44995c701096fc383a6a56192"
+              "1b15d68773ef1c64ef83367627918ac4b072c93e"
             ]
           },
           "content": "Note that the two `major_id` columns were turned into one with `USING`. In order to find out what courses a student is taking, you will need to join all the tables together. You can add a third table to a join like this: `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>) FULL JOIN <table_3> USING(<column>)`. This example will join the first two tables into one, turning it into the left table for the second join. Use this method to join the two tables from the previous query with the `majors_courses` table.",
@@ -3350,14 +3501,6 @@
       "steps": [
         {
           "id": "2410.1",
-          "setup": {
-            "watchers": [
-              "./.freeCodeCamp/test/pg.log"
-            ],
-            "commits": [
-              "6ea0ff36974983971debb69cd37b244e5b67d6eb"
-            ]
-          },
           "content": "You may need to adjust the terminal size to align the output. What you're seeing is every unique combination of rows in the database. Students with a major are listed multiple times, one for each course included in the major. The majors without any students are there along with the courses for them. The students without a major are included, they have no courses and are only listed once. You can join as many tables together as you want. Join the last table to the previous command to get the names of the courses with all this info.",
           "hints": [
             "The previous query was `SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id);`",
@@ -3377,14 +3520,6 @@
       "steps": [
         {
           "id": "2420.1",
-          "setup": {
-            "watchers": [
-              "./student_info.sh"
-            ],
-            "commits": [
-              "c0c7897f75374fe53da50bb9e42643936652fdc7"
-            ]
-          },
           "content": "Same amount of rows, but you get the course names now. In your script, add the command to print the suggested info.",
           "hints": [
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
@@ -3404,14 +3539,6 @@
       "steps": [
         {
           "id": "2430.1",
-          "setup": {
-            "watchers": [
-              "../.bash_history"
-            ],
-            "commits": [
-              "abfcee155832f739a97455f7630c17d3ea7908dc"
-            ]
-          },
           "content": "Run the script to see courses described.",
           "hints": [
             "Run your `student_info.sh` script by executing it",
@@ -3429,14 +3556,6 @@
       "steps": [
         {
           "id": "2440.1",
-          "setup": {
-            "watchers": [
-              "./student_info.sh"
-            ],
-            "commits": [
-              "f6894d455e190195152d0217a6870e3bde36e66f"
-            ]
-          },
           "content": "Last one. Add a command that prints `List of courses, in alphabetical order, with only one student enrolled:`.",
           "hints": [
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
@@ -3455,14 +3574,6 @@
       "steps": [
         {
           "id": "2450.1",
-          "setup": {
-            "watchers": [
-              "./student_info.sh"
-            ],
-            "commits": [
-              "2347e4a637b1521f76083eb347f316c6b5fe0ff3"
-            ]
-          },
           "content": "Go for it.",
           "hints": [
             "Add a command at the bottom of the script to print the suggested information",
@@ -3488,14 +3599,6 @@
       "steps": [
         {
           "id": "2460.1",
-          "setup": {
-            "watchers": [
-              "../.bash_history"
-            ],
-            "commits": [
-              "f7dfe73cec06ca6915c0ed2990d2aa06788838c9"
-            ]
-          },
           "content": "This is the last step, you have done really well. Run the script one last time. :wave:",
           "hints": [
             "Run your `student_info.sh` script by executing it",
