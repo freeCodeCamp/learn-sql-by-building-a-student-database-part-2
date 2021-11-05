@@ -13,3 +13,6 @@ sudo chown -R postgres:postgres /var/lib/postgresql/12/main
 sudo service postgresql restart
 sudo -u postgres psql -c "DROP USER freecodecamp;"
 sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
+
+# Rebuild database
+psql -U postgres < ./.freeCodeCamp/reset_files/students.sql
