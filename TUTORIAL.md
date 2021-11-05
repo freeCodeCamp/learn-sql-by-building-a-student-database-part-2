@@ -1547,7 +1547,7 @@ That showed all the students since it was the right table of the `RIGHT JOIN`. U
 - Join them with the join that only shows rows if they have a value in the foreign key column of the other table
 - The previous query was: `SELECT * FROM majors INNER JOIN students ON majors.major_id = students.major_id;`
 - You want to use an `INNER JOIN` with the two tables
-- Enter `SELECT * FROM majors INNER JOIN students ON majors.major_id = students.major_id;` in the psql prompt
+- Enter `SELECT * FROM majors FULL JOIN students ON majors.major_id = students.major_id;` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2200. psql SELECT * students INNER JOIN majors
