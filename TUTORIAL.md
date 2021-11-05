@@ -1,6 +1,6 @@
-# Learn SQL by Building a Student Database
+# Learn SQL by Building a Student Database: Part 2
 
-> Welcome to the SQL Lessons!
+> Welcome to Part two of the SQL Lessons!
 
 ## 10. Start the Terminal
 
@@ -17,7 +17,7 @@
 
 ### 20.1
 
-You are started with two `.csv` files with info about your computer science students. You should take a look at them. The top row in each file has titles, and the rest are values for those titles. You will be adding all that info to a PostgreSQL database. Log into the psql interactive terminal with `psql --username=freecodecamp --dbname=postgres` to get started.
+In Part 1 of this tutorial, you created a `students` database and then a script to insert information about your computer science students into it. Log into the psql interactive terminal with `psql --username=freecodecamp --dbname=postgres` to see if it's here.
 
 #### HINTS
 
@@ -27,29 +27,112 @@ You are started with two `.csv` files with info about your computer science stud
 
 ### 30.1
 
-View the existing databases with the `\l` shortcut command to see what's here.
+List the databases.
 
 #### HINTS
 
+- Use the **l**ist shortcut command
+- It's the `\l` command
 - Type `\l` into the psql prompt and press enter
+- Enter `psql --username=freecodecamp --dbname=postgres` in the terminal to log into the psql prompt if you aren't already
+
+## 40. rebuild database
+
+### 40.1
+
+Your database isn't here. You can use the `.sql` file you created at the end of Part 1 to rebuild it. I recommend "splitting" the terminal. You can do that by clicking the "hamburger" menu at the top left of the window, going to the "Terminal" menu, and clicking "Split Terminal". Once you've done that, enter `psql -U postgres < students.sql` in it to rebuild the database.
+
+#### HINTS
+
+- Enter the suggested command in the terminal
+- Make sure you are in the `project` folder first
+
+## 50. \l
+
+### 50.1
+
+A lot of stuff happened in the terminal. That looks promising. In the psql prompt, view the databases again.
+
+#### HINTS
+
+- Use the **l**ist shortcut command
+- It's the `\l` command
+- Type `\l` into the psql prompt and press enter
+- Enter `psql --username=freecodecamp --dbname=postgres` in the terminal to log into the psql prompt if you aren't already
+
+## 60. \c students
+
+### 60.1
+
+There's your `students` database. Connect to it.
+
+#### HINTS
+
+- Use the **c**onnect shortcut command with the database name after it
+- It's the `\c` command
+- Here's an example `\c <database>`
+- Type `\c students` into the psql prompt and press enter
+- Enter `psql --username=freecodecamp --dbname=postgres` in the terminal to log into the psql prompt if you aren't already
+
+## 70. \d
+
+### 70.1
+
+Now that you're connected. Display the tables and relations that are here to see if it's all correct.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- It's the `\d` command
+- Type `\d` into the psql prompt and press enter
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 80. \d students
+
+### 80.1
+
+That all looks right. View the details of the `students` table to make sure the stucture is right.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command with the table name after it
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d students` into the psql prompt and press enter
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 90. select * from students
+
+### 90.1
+
+Looks good. Make sure all the data is in the table, as well.
+
+#### HINTS
+
+- View all the data in the `students` table
+- Use the `SELECT` and `FROM` keywords with `*` to view all the columns
+- Here's an example: `SELECT <columns> FROM <table_name>`;
+- Type `SELECT * FROM students;` into the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1220. touch student_info.sh
 
 ### 1220.1
 
-Next, you are going to make a script to print info about your students. In the terminal, use `touch` to create a `student_info.sh` file.
+The data is all there. You should take a look at the details of the other tables and the data in them to make sure they look good. When you are done, use `touch` in the bash terminal to create `student_info.sh`. You are going to make a script to print info about your students.
 
 #### HINTS
 
 - Here's an example: `touch <filename>`
 - Enter `touch student_info.sh` in the terminal
+- The bash terminal, not the psql one
 - Make sure you are in the `project` folder first
 
 ## 1230. chmod +x student_info.sh
 
 ### 1230.1
 
-Give your file executable permissions.
+Give your new file executable permissions.
 
 #### HINTS
 
@@ -61,12 +144,12 @@ Give your file executable permissions.
 
 ### 1240.1
 
-Add shebang that uses bash to your new script.
+Add a shebang that uses bash at the top of your new script.
 
 #### HINTS
 
 - The shebang you want is `#!/bin/bash`
-- Add the text, `#!/bin/bash` to your `student_info.sh` file
+- Add `#!/bin/bash` to your `student_info.sh` file
 
 ## 1250. Add comment
 
@@ -108,16 +191,11 @@ Run the script to make sure it's working.
 
 ### 1270.1
 
-You will want to query the database again to get info about the students to display. Add the same `PSQL` variable from your other script.
+You will want to query the database again to get info about the students to display. Add the same `PSQL` variable you use in your `insert_data.sh` script. It looked like this: `PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"`
 
 #### HINTS
 
-
-- Make sure to use all the same flags in the same order
-- Add the following to the bottom of the `student_info.sh` file:
-```sh
-PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
-```
+- Add the suggested variable at the bottom of the `student_info.sh` file
 
 ## 1280. Add echo students with 4.0
 
