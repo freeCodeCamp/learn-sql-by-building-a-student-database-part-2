@@ -783,7 +783,7 @@ Saunders
 Hilpert
 Hassanah
 ```
-- Add `echo "$($PSQL "SELECT last_name FROM students WHERE last_name ILIKE '%sa%' OR last_name LIKE '%r_'")"` to the bottom of the `student_info.sh` file
+- Add `an echo "$($PSQL "SELECT last_name FROM students WHERE last_name ILIKE '%sa%' OR last_name LIKE '%r_'")"` to the bottom of the `student_info.sh` file
 
 ## 1700. ./student_info.sh
 
