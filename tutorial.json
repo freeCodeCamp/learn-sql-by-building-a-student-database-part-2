@@ -1511,7 +1511,7 @@
               "ea69a12ff2f962cc34793995e47512ea6265ba4c"
             ]
           },
-          "content": "In your student info script, add `echo` statement at the bottom like the other to print the results of the suggested query.",
+          "content": "In your student info script, add an `echo` statement at the bottom like the other to print the results of the suggested query.",
           "hints": [
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
             "You previously used `SELECT * FROM courses WHERE course NOT ILIKE '%A%' AND course LIKE '% %';` in the psql prompt",
