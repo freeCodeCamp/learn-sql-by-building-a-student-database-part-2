@@ -767,7 +767,7 @@ You combine these like any other conditions. View the courses that don't have a 
 
 ### 1690.1
 
-In your student info script, add `echo` statement at the bottom like the other to print the results of the suggested query.
+In your student info script, add an `echo` statement at the bottom like the other to print the results of the suggested query.
 
 #### HINTS
 
