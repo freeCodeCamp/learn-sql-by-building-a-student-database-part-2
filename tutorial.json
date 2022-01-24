@@ -1,6 +1,6 @@
 {
   "id": "freeCodeCamp/learn-sql-by-building-a-student-database-part-2:v1.0.0",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "summary": {
     "title": "Learn SQL by Building a Student Database: Part 2",
     "description": "> Welcome to Part 2 of the Build a Student Database Lessons!"
@@ -12,7 +12,7 @@
         "cd .freeCodeCamp && npm install"
       ],
       "commits": [
-        "2f877b1e8f21188e5ab22cd50138271cc15df089"
+        "44c2aea3f523de2478c15c0e2f0afc4e6c1028e7"
       ]
     },
     "testRunner": {
@@ -24,7 +24,7 @@
     },
     "repo": {
       "uri": "https://github.com/freeCodeCamp/learn-sql-by-building-a-student-database-part-2",
-      "branch": "v1.0.1"
+      "branch": "v1.0.2"
     },
     "continue": {
       "commands": [
@@ -67,7 +67,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "17f13abf1fba89212239b2f7d4d87c09b40ce252"
+              "d6e1d4c465c7b498d971722c8c7705a7574946ae"
             ]
           },
           "content": "**The first thing you need to do is start the terminal.** Do that by clicking the \"hamburger\" menu at the top left of the screen, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello SQL` into the terminal and press enter.",
@@ -91,7 +91,7 @@
               "../pg.log"
             ],
             "commits": [
-              "ad019c5caa9459ad0210afa8b0a6a88bf5f3642f"
+              "50dad25e12002707342f28136b14d45bd39c8b9f"
             ]
           },
           "content": "In Part 1 of this tutorial, you created a `students` database and then a script to insert information about your computer science students into it. Log into the psql interactive terminal with `psql --username=freecodecamp --dbname=postgres` to see if it's here.",
@@ -114,7 +114,7 @@
               "../pg.log"
             ],
             "commits": [
-              "634327319878fa7b3ed439723b4ebfff3a23ded7"
+              "fc011ab609ebc9b95657f2d6db8a657aaff8a7e0"
             ]
           },
           "content": "List the databases.",
@@ -140,7 +140,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0157df3724fccebd04c95d2bc8e44cf6824b202e"
+              "aa0e4fe09979a12c2732c379f8b815b71aca0b15"
             ]
           },
           "content": "Your database isn't here. You can use the `.sql` file you created at the end of Part 1 to rebuild it. I recommend \"splitting\" the terminal. You can do that by clicking the \"hamburger\" menu at the top left of the window, going to the \"Terminal\" menu, and clicking \"Split Terminal\". Once you've done that, enter `psql -U postgres < students.sql` in it to rebuild the database.",
@@ -164,7 +164,7 @@
               "../pg.log"
             ],
             "commits": [
-              "6d9f4778abbfd5aa845336cd7ab049b56b92aa54"
+              "9f0ad2f3d6ef01caebc2570ffc6301b90c893f10"
             ]
           },
           "content": "A lot of stuff happened in the terminal. That looks promising. In the psql prompt, view the databases again.",
@@ -190,7 +190,7 @@
               "../pg.log"
             ],
             "commits": [
-              "beb192f0b08229d38dbaac39e6361684d318afec"
+              "316ccf12eeca513213e6d4d7a76401726fd42899"
             ]
           },
           "content": "There's your `students` database. Connect to it.",
@@ -217,7 +217,7 @@
               "../pg.log"
             ],
             "commits": [
-              "cf67b70dcec24e7d5ae4fafee685c0212c4c6def"
+              "5e6b57c605695d8a00dd48bf4d6b6f19f330c948"
             ]
           },
           "content": "Now that you're connected. Display the tables and relations that are here to see if it's all correct.",
@@ -243,7 +243,7 @@
               "../pg.log"
             ],
             "commits": [
-              "2a7d691a7ec2574d9894abf4a7a6ca3cf2db93f7"
+              "46c6edef6561f25c859297da8eb14c630e9867b1"
             ]
           },
           "content": "That all looks right. View the details of the `students` table to make sure the stucture is right.",
@@ -270,7 +270,7 @@
               "../pg.log"
             ],
             "commits": [
-              "2e189ee9fe5989dfde4931ea4e4d569814e4ecb5"
+              "bade790fa3042ded172bd28f6edf294fe7ad0a6e"
             ]
           },
           "content": "Looks good. Make sure all the data is in the table, as well.",
@@ -297,7 +297,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "92f909584a57f2cc53968e1c0e9a54b5a968355f"
+              "676a4017bcb2450879dd1f339c8751faff4750d5"
             ]
           },
           "content": "The data is all there. You should take a look at the details of the other tables and the data in them to make sure they look good. When you are done, use `touch` in the bash terminal to create `student_info.sh`. You are going to make a script to print info about your students.",
@@ -323,7 +323,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "473f798f87c09073883be68bcaae5fab698e78c9"
+              "0f0d6c4763f8a00a8cd1cb490da843a60ed418ea"
             ]
           },
           "content": "Give your new file executable permissions.",
@@ -348,7 +348,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "191bf0d1a2abcc2bd13c8f58078cc7dbe1bf0bd9"
+              "476a6ab4b469e2df3c19c73e69709824f482352f"
             ]
           },
           "content": "Add a shebang that uses bash at the top of your new script.",
@@ -372,7 +372,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "eaa93826c2c874a875a5221581754fe7c4d62f95"
+              "c64c93bf9f9f9894428b4626bd838d3a751547d2"
             ]
           },
           "content": "Below the shebang, add a comment that says `Info about my computer science students from students database`.",
@@ -397,7 +397,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "db8f272b23f62df70ee495d4cdcaba4a3583fad2"
+              "c71041cf597003f7381e886dd77b9bc620ab483c"
             ]
           },
           "content": "In the new script, use `echo` to print `~~ My Computer Science Students ~~`. Use the `-e` flag with it to put a new line at the beginning and end of the text.",
@@ -422,7 +422,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "988139a0c28c7ef586353a4d570078b9d89b32cf"
+              "71c0e05e5eefa807f507f271ae966c8f01b54494"
             ]
           },
           "content": "Run the script to make sure it's working.",
@@ -447,7 +447,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "0a927abc4b6736deea4d44052eff0da2481f1242"
+              "e5898d50ad8219fd654b791afb00c0c0ed0e3c21"
             ]
           },
           "content": "You will want to query the database again to get info about the students to display. Add the same `PSQL` variable you use in your `insert_data.sh` script. It looked like this: `PSQL=\"psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c\"`",
@@ -470,7 +470,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "ef626ea329c36706b5a3d2fd80e9f98d1894450e"
+              "971516b83cf88cc5dcfe6d7383e0d94242f7716d"
             ]
           },
           "content": "Below the PSQL variable you just added, use `echo` to print `First name, last name, and GPA of students with a 4.0 GPA:`. Use the `-e` flag to put a new line at the beginning of the sentence.",
@@ -495,7 +495,7 @@
               "../pg.log"
             ],
             "commits": [
-              "a4dc6b586dc411d6f69e9746e8bd211cb121d282"
+              "d0719cb7d315de7af138445594b47bc1dbde362e"
             ]
           },
           "content": "You will want to print what that sentence is asking for. You should know how to make that query, but lets practice a little first. `SQL` stands for \"Structured Query Language\". It's the language you have been using to manage your relational databases. In the psql prompt, view all the data in the students table like you have done many times.",
@@ -520,7 +520,7 @@
               "../pg.log"
             ],
             "commits": [
-              "f0a9b9be94147389c08c83e4dbd899f4585bc6ae"
+              "105e0ca566183dcd5a89e15f647e47947fd71f58"
             ]
           },
           "content": "You should look at the column titles that were returned. The `*` gets all columns in a table with your query. You can return specific columns by putting the column name in the query instead of `*`. In the psql prompt, view just the `first_name` column from the `students` table.",
@@ -546,7 +546,7 @@
               "../pg.log"
             ],
             "commits": [
-              "81e6a7384ea1c2ffce74d14d5bcc364734b2b764"
+              "ad8b218ef2e674378b26766970b2cee3c240acfc"
             ]
           },
           "content": "Just the `first_name` column was returned that time. You can specify as many columns you want returned by separating them with commas. View the `first_name`, `last_name` and `gpa` columns from the `students` table.",
@@ -573,7 +573,7 @@
               "../pg.log"
             ],
             "commits": [
-              "1c473e698fa45be37a2ab105c3d7be04e4535f08"
+              "e8ba3c05e47cfd791103a197d19a692c6746ce46"
             ]
           },
           "content": "You can return only rows you want by adding `WHERE <condition>` to your query. A condition can consist of a column, an operator, and a value. Use one of these to view the same columns as before but only rows `WHERE gpa < 2.5`.",
@@ -600,7 +600,7 @@
               "../pg.log"
             ],
             "commits": [
-              "d948e8c70d992cbf05382d02bb0ed35f3f735b35"
+              "4a0095cc77cdecadb957f9038cb992b7d37f680e"
             ]
           },
           "content": "The `<` only return rows where the `gpa` column was less than `2.5`. Some other operators are: `<`, `>`, `<=`, `>=`. View the same columns, but only rows for students with a `gpa` greater than or equal to `3.8`.",
@@ -628,7 +628,7 @@
               "../pg.log"
             ],
             "commits": [
-              "4f87aa136abff7e862b9c45df416df832c26d00c"
+              "5a04dc4ea7f9c37f222ead01ab7e27133a3b2d1e"
             ]
           },
           "content": "That only returned students with a GPA of 3.8 or better. There's equal (`=`) and not equal (`!=`) operators as well. View the same columns for students that don't have a 4.0 gpa.",
@@ -655,7 +655,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "bed3ff291c3aa281296d8aea856ecbf7d38208a7"
+              "206c3951c0d1bbf32de1861c7d3829977d338b81"
             ]
           },
           "content": "The right query will get you only the data you are looking for. Back in your `student_info.sh` file, add an `echo` command to the bottom that prints what the sentence above it asks for. Place double quotes around it like this: `echo \"$($PSQL \"<query_here>\")\"`. This will make it so the output isn't all on one line.",
@@ -683,7 +683,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "33b35791651187168f7fbc26b61aee5b2bdae6ae"
+              "47749b4bcde1d30580709ac2e8a8c3220ffc22aa"
             ]
           },
           "content": "Run the script to see your students with the highest GPA's.",
@@ -708,7 +708,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "220dfbb87e7166fc9b41ac8107185bce8b4f505a"
+              "aa4b9d590e7d6b807d1e071bf07cd6faa287d4a6"
             ]
           },
           "content": "Add another `echo` statement at the bottom of the script. Make it print `All course names whose first letter is before 'D' in the alphabet:`. Put a new line in front of it like the first sentence.",
@@ -734,7 +734,7 @@
               "../pg.log"
             ],
             "commits": [
-              "4a95e32d8ac0590502b6b3d0ade28d26aa06e868"
+              "42362bc0bdafd613c8a5cd50e30811a5c1cf2f9d"
             ]
           },
           "content": "Practice first. In the psql prompt, view all the data in the `majors` table.",
@@ -759,7 +759,7 @@
               "../pg.log"
             ],
             "commits": [
-              "a7ed53532f670b654c44029616c20211a46fe63c"
+              "63eee19fe1cfd49a0add8f9d89cca91cce489a68"
             ]
           },
           "content": "The operators you used with numbers in the last section can be used on text as well. Use the `=` to view all majors named `Game Design`. Don't forget that You need single quotes around text values.",
@@ -786,7 +786,7 @@
               "../pg.log"
             ],
             "commits": [
-              "dbf67531960be07c5d93013c5c39b1e57ffeeee7"
+              "df103d5ecb72975f809d096dd2636c875fd94137"
             ]
           },
           "content": "Next, view all the rows not equal to `Game Design`.",
@@ -814,7 +814,7 @@
               "../pg.log"
             ],
             "commits": [
-              "ce7e29c517aa7b19dfc3a32672489c901c4b33cd"
+              "db7b8818c47b170775445b8d0cab11cd17e74178"
             ]
           },
           "content": "Use the greater than operator to see majors that come after it alphabetically.",
@@ -843,7 +843,7 @@
               "../pg.log"
             ],
             "commits": [
-              "4343640a932411c5d41428b46be18987acd28afb"
+              "dad0e218208581ed939ff8e627cfe160af207711"
             ]
           },
           "content": "`Game Design` was not included in the results because it is not `> 'Game Design'`. Try it with the greater than or equal to operator.",
@@ -872,7 +872,7 @@
               "../pg.log"
             ],
             "commits": [
-              "707e4d2e41bd77ef8f302fb5f3a7fc48cbbdbbb3"
+              "1331e10bf1482dfa0c1187fbce1a36e27a9fc338"
             ]
           },
           "content": "It included `Game Design` in the results that time. So if you want to see results that start with a `G` or after, you could use `major >= 'G'`. View the majors that come before `G`.",
@@ -900,7 +900,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "f600d2cf4180729b8aaba1e5f353e39e3c164505"
+              "c47919be04de099b8a1a4f09e735622baae170a1"
             ]
           },
           "content": "In your script, add an `echo` at the bottom to print the suggested info like you did before. Make sure to use double quotes where needed.",
@@ -929,7 +929,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d33fd061839443fccff898ef87bb11e00af01b6e"
+              "ecb2d3c97eeb50b8ea373f2b2f73103fd1dc1d31"
             ]
           },
           "content": "Run the script to see what course names come before the letter `D`.",
@@ -954,7 +954,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "92fbe8c54430e667426da2176f998da06ab43d2b"
+              "323a7a062da7b32963e4a79bbe392656b92e2883"
             ]
           },
           "content": "Looks like there is five of them. Add another sentence like the others that says: `First name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:`",
@@ -980,7 +980,7 @@
               "../pg.log"
             ],
             "commits": [
-              "42ab9cee2b75548090f3a69f25106c8c4dff7e1e"
+              "5c6ab95fc8a15fa6fafdcddc2b33a8d16a3823b1"
             ]
           },
           "content": "To find that, start by using the psql prompt to view all the data in the `students` table.",
@@ -1005,7 +1005,7 @@
               "../pg.log"
             ],
             "commits": [
-              "a27cef7c28d0df356e458b182cc0cb8ce56971e6"
+              "7066c58ddc822135d8df01eaf827d6d12fbcb64c"
             ]
           },
           "content": "It returned 31 rows. Use the same command, but only return the rows for students whose last name comes before `M` in the alphabet.",
@@ -1033,7 +1033,7 @@
               "../pg.log"
             ],
             "commits": [
-              "71e7d6480bc8edb3667da02407d9c3eac8514089"
+              "f56975124a3b1a889b870e86f9dcc8041e4f4406"
             ]
           },
           "content": "That returned 18 rows. You can use multiple conditions after `WHERE` with `AND` or `OR`, among others. Just add the keyword and another condition. In the psql prompt, use the same command as before, but add an `OR` to also return rows of students with a 3.9 GPA.",
@@ -1062,7 +1062,7 @@
               "../pg.log"
             ],
             "commits": [
-              "3f2194554cb74ba4d14e5e4506d28edf08ff33fe"
+              "ab72051a54b176a92df254e974eff39067b9f757"
             ]
           },
           "content": "It showed rows where one of the conditions was true, there was one more than last time. Enter the previous command, but use `AND` to view only students that meet both conditions.",
@@ -1088,7 +1088,7 @@
               "../pg.log"
             ],
             "commits": [
-              "13fa110c425f4c82d44f3bdbfa1ff4bac139efb0"
+              "6c8bdda78a632885db0f13ce89d2396ae6b181c4"
             ]
           },
           "content": "Now it only shows rows where both conditions are true, one person. Enter the previous command, but add a third condition of `OR gpa < 2.3`.",
@@ -1115,7 +1115,7 @@
               "../pg.log"
             ],
             "commits": [
-              "700d03d57f6777048c28425e62584a60c4083b00"
+              "d5543d3a66524a531f70d07ade1eff4aa616e961"
             ]
           },
           "content": "This showed all students whose GPA is less than 2.3 because the final `OR` condition was true for them. It didn't matter what their last name started with. You can group conditions together with parenthesis like this: `WHERE <condition_1> AND (<condition_2> OR <condition_2>)`. This would only return rows where `<condition_1>` is true and one of the others is true. View students whose last name is before `M` that have a GPA of 3.9 or less than 2.3.",
@@ -1141,7 +1141,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "8a31bd913fb44b4e5e5fb6af52fab985f61c8451"
+              "32117615631cef52e7de96ddef5c97228394d542"
             ]
           },
           "content": "Two students meet those conditions. Back in the student info file, add an echo command at the bottom to print the suggested rows.",
@@ -1169,7 +1169,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "e5e0a82f2951173ccf51a4660f0554f77cb4db5f"
+              "ef9413ad319ba9119f2c715feed50793a05733bf"
             ]
           },
           "content": "Run the script to see the results.",
@@ -1194,7 +1194,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "97cc71c0b92a27b063ea798eecffbd67ec6cdbf6"
+              "0f61aaa78d516d82533e4a419ae4709fede203b0"
             ]
           },
           "content": "Moving along. Add another `echo` command, like the others, with a sentence that says: `Last name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:`",
@@ -1220,7 +1220,7 @@
               "../pg.log"
             ],
             "commits": [
-              "cb00a715c51209472e74b1dcdc6e18460a139ad9"
+              "c4c410cb8237dcf2922a9bfce26b16346509b7fd"
             ]
           },
           "content": "Start by viewing everything from the `courses` table in the psql prompt to see how you might be able to find this out.",
@@ -1245,7 +1245,7 @@
               "../pg.log"
             ],
             "commits": [
-              "053374510df50fc93d50571e8de0d66eb5e3fbdb"
+              "252f512b61b981b92b200d48cfef2159fa7ee7c6"
             ]
           },
           "content": "There's a few that contain the word `Algorithms`. You can use `LIKE` to find patterns in text like this: `WHERE <column> LIKE '<pattern>'`. An underscore (`_`) in a pattern will return rows that have any character in that spot. View the rows in this table with a course name that matches the pattern `'_lgorithms'`.",
@@ -1270,7 +1270,7 @@
               "../pg.log"
             ],
             "commits": [
-              "fa6f20e569248e4c3514315ffba6e443e57e140a"
+              "ebace48ec0cc32f192f08a21ffc16fee10b34241"
             ]
           },
           "content": "That pattern matched only rows that had exactly one character, followed by `lgorithms`. Another pattern character is `%`. It means anything can be there. To find names that start with `W`, you could use `W%`. View the courses that end in `lgorithms`.",
@@ -1297,7 +1297,7 @@
               "../pg.log"
             ],
             "commits": [
-              "7c53a3dbd86582ac55f1e9560e81ead85bfc51c3"
+              "671eded75c74cfca094650b56b11b7e8ef3ed268"
             ]
           },
           "content": "It found two that time. Try viewing courses that start with `Web`.",
@@ -1324,7 +1324,7 @@
               "../pg.log"
             ],
             "commits": [
-              "699181d014c962cafc4a885ce2c8252d6204856c"
+              "b5182c4d40ef58e4cd9caec9af5b3cf24b5d47c4"
             ]
           },
           "content": "Combine the two pattern matching characters to show courses that have a second letter of `e`.",
@@ -1352,7 +1352,7 @@
               "../pg.log"
             ],
             "commits": [
-              "661962f60c4220f487ddaef8dc7d45be945e70ec"
+              "b1909592600dc0b81d615440e0312c2e368cdafa"
             ]
           },
           "content": "Nice job! Try viewing the courses with a space in their names.",
@@ -1379,7 +1379,7 @@
               "../pg.log"
             ],
             "commits": [
-              "1816585ac7b47bb049d1c7bce04c9e7cece67ff0"
+              "5313f1c0ea38eb12b3dc111e24cff072fe9a0a1b"
             ]
           },
           "content": "There they are. You can use `NOT LIKE` to find things that don't match a pattern. View courses that don't contain a space.",
@@ -1406,7 +1406,7 @@
               "../pg.log"
             ],
             "commits": [
-              "5ba86224f300fa5aa85e55b3fcfb1c4ed239a200"
+              "be33ea86749da74dd1c6ade1c277ff41ab0b3527"
             ]
           },
           "content": "Five courses without a space. Try finding the ones that contain an `A`.",
@@ -1433,7 +1433,7 @@
               "../pg.log"
             ],
             "commits": [
-              "633f06cf624f742b794f8b0dcf43f0659d556258"
+              "3ddfec2eb95fb19c7fc8a945f6c816afedb2ac47"
             ]
           },
           "content": "6 rows. This showed all the courses with a capital `A`. `ILIKE` will ignore the case of the letters when matching. Use it to see the courses with an `A` or `a`.",
@@ -1460,7 +1460,7 @@
               "../pg.log"
             ],
             "commits": [
-              "1a2f06960ce5aad88db610cd4d09e58bfdde3aff"
+              "385c03a3566a005c3e8e3b491e6c3c9da9b8784c"
             ]
           },
           "content": "It found 11 rows that time. You can put `NOT` in front of `ILIKE` as well. Use it to see the courses that don't contain an `A` or `a`.",
@@ -1487,7 +1487,7 @@
               "../pg.log"
             ],
             "commits": [
-              "f3cbb30c67eece37cd8a7dc67c76d7889130c3ed"
+              "056cc45cff3ab78dfb0a4ee68be4e1ae2c606c91"
             ]
           },
           "content": "You combine these like any other conditions. View the courses that don't have a capital or lowercase `A` and have a space.",
@@ -1514,7 +1514,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "7f38182932b085c3e821d5641f22385c12dd7d3d"
+              "d8827cc3262c66c3f030521bbf2462c96caafa12"
             ]
           },
           "content": "In your student info script, add an `echo` statement at the bottom like the other to print the results of the suggested query.",
@@ -1542,7 +1542,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "1d9800f7ef73ea8ba7d8f8c1115e1fd9d2432e7a"
+              "dc85124af5da47e0f43c7c429362ee473a040cab"
             ]
           },
           "content": "Run the script to see the results.",
@@ -1567,7 +1567,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "b223e6ee97ed13313a5947c45beb5dce70e11e98"
+              "58e0349a2af6e37f79c4f13441ff54c9d3c03d8b"
             ]
           },
           "content": "Looks like five students meet those conditions. Add another `echo` command at the bottom, like the others. Make this one say: `First name, last name, and GPA of students who have not selected a major and either their first name begins with 'D' or they have a GPA greater than 3.0:`",
@@ -1593,7 +1593,7 @@
               "../pg.log"
             ],
             "commits": [
-              "fcbe72e7a2c0b48bb3deb9b642fb9e2dee59ebdc"
+              "b32b1c550a38f920e63516ce305481603663a6db"
             ]
           },
           "content": "Start by looking at all the data in the students table.",
@@ -1618,7 +1618,7 @@
               "../pg.log"
             ],
             "commits": [
-              "7730a680916dcb7b64f99e046237d1198c2d3a73"
+              "a239cd8cfc9909acedddda2dc6f160a24fcb20a5"
             ]
           },
           "content": "All the fields that are empty or blank are `null`. You can access them using `IS NULL` as a condition like this: `WHERE <column> IS NULL`. View the students who don't have a GPA.",
@@ -1645,7 +1645,7 @@
               "../pg.log"
             ],
             "commits": [
-              "e74e986e6c50e1df82bb19194c850de81b1b3d51"
+              "204a5bbef1ec188413bfab8324b217d467a8fd47"
             ]
           },
           "content": "Inversely, you can use `IS NOT NULL` to see rows that aren't null. View all the info on students that do have a GPA.",
@@ -1672,7 +1672,7 @@
               "../pg.log"
             ],
             "commits": [
-              "32a2626fca4a22234a5de26a06e7533f1d0d1197"
+              "40f89ed19e543fc81d3da28cfb3681ec82648971"
             ]
           },
           "content": "View all the info on students who haven't chosen a major.",
@@ -1700,7 +1700,7 @@
               "../pg.log"
             ],
             "commits": [
-              "d19f5988c54ffe4420e6a6b2c7289ca1b0480000"
+              "d0ecf0d3f9dc6bb709a0b61d086976b8eba406e3"
             ]
           },
           "content": "View the students who don't have a major, but don't include students without a GPA.",
@@ -1727,7 +1727,7 @@
               "../pg.log"
             ],
             "commits": [
-              "bea0a720569e39a79f08ef8dfee9c847b927acc9"
+              "ad58e680820e0eafc4d9aad54693a2904c9f2e3b"
             ]
           },
           "content": "One more. View the students who don't have a major and gpa.",
@@ -1754,7 +1754,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "e1fd161577c3b1fe53ea15476dcc7465775a1f6d"
+              "9b4b091a50c5af01d5c8f91e5d7b5a180ca3569a"
             ]
           },
           "content": "In your script, add an `echo` command at the bottom to print the results the sentence is looking for.",
@@ -1784,7 +1784,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "de852f54a023f3fe9e61213957d0fed8d41b0080"
+              "80b37d17e472cf9f860d816ab1feb2fec5f1dcd9"
             ]
           },
           "content": "Run the script to see the students that meet those conditions.",
@@ -1809,7 +1809,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "a04e67027ee4bd806e8314d308755ea3eb302647"
+              "56196751fb8b1e282a902209a6f6d04227e19878"
             ]
           },
           "content": "There's three of them. Add another sentence, like the others that says `Course name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':`",
@@ -1835,7 +1835,7 @@
               "../pg.log"
             ],
             "commits": [
-              "50943dcfad76faa81f6988f79bc1f80d21ddfe20"
+              "63600d9d4a579fd941877b19aa7316887a57b916"
             ]
           },
           "content": "You can specify the order you want your results to be in by adding `ORDER BY <column_name>` at the end of a query. In the psql prompt, view all the info in the `students` table in order by the GPA's.",
@@ -1862,7 +1862,7 @@
               "../pg.log"
             ],
             "commits": [
-              "4389b5198bce557a40a3937a951cca8577112dfe"
+              "e5683a09ce1c5166f264d04be48e97e486fa8dde"
             ]
           },
           "content": "That put the lowest GPA's at the top. When using `ORDER BY`, it will be in ascending (`ASC`) order by default. Add `DESC` (descending) at the end of the last query to put the highest ones at the top.",
@@ -1888,7 +1888,7 @@
               "../pg.log"
             ],
             "commits": [
-              "bf09f8e38f6d02f8243cccb873eeaaed2d0d2323"
+              "988adecfefe746664a5cdbaeb092fde285394a7f"
             ]
           },
           "content": "Now, the highest GPA's are at the top. You can add more columns to the order by separating them with a comma like this: `ORDER BY <column_1>, <column_2>`. Any matching values in the first ordered column will then be ordered by the next. View all the student info with the highest GPA's at the top, and in alphabetical order by `first_name` if the GPA's match.",
@@ -1914,7 +1914,7 @@
               "../pg.log"
             ],
             "commits": [
-              "7c200edabd8d631264e8c33b37b35ec58d6b3dd5"
+              "ed386e38bab5eb180613f0ed383b929466cb3737"
             ]
           },
           "content": "Many times, you only want to return a certain number of rows. You can add `LIMIT <number>` at the end of the query to only get the amount you want. View the students in the same order as the last command, but only return the first 10 rows.",
@@ -1940,7 +1940,7 @@
               "../pg.log"
             ],
             "commits": [
-              "b148759e0625f8df12952e23342149ad925de42b"
+              "b7a61b3695d2b1602132c8dc67f4c777539e837b"
             ]
           },
           "content": "The order of the keywords in your query matters. You cannot put `LIMIT` before `ORDER BY`, or either of them before `WHERE`. View the same number of students, in the same order, but don't get the ones who don't have a GPA.",
@@ -1968,7 +1968,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "85218073a0d0041d56d24527f64ae9e91c1357b3"
+              "4b837bab8aa67b5d5b4e01d467b9efad288191e6"
             ]
           },
           "content": "In your script, add the `echo` command to print the rows the sentence is asking for.",
@@ -1995,7 +1995,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "a7c0388e4fa151519aed59d7bf7821f6896ba989"
+              "c031578e0bfad50813914d51fc2eaeedea20614e"
             ]
           },
           "content": "Run the script to see the courses.",
@@ -2020,7 +2020,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "617397f54c4855beac34df0126313bd635453c3e"
+              "471f4a5b40bb171165f619c6303d950169edb33c"
             ]
           },
           "content": ":sunglasses: Add another `echo` command at the bottom of the script like the others. Make this one say, `Average GPA of all students rounded to two decimal places:`",
@@ -2046,7 +2046,7 @@
               "../pg.log"
             ],
             "commits": [
-              "a9de541f4b67c597d01c4efd1a990bc5ca36a9c4"
+              "b80451b4ae634212cf78b232cd877dd9ea8d4558"
             ]
           },
           "content": "There's a number of mathematic functions to use with numerical columns. One of them is `MIN`, you can use it when selecting a column like this: `SELECT MIN(<column>) FROM <table>`. It will find the lowest value in the column. In the psql prompt, view the lowest value in the `gpa` column of the `students` table.",
@@ -2070,7 +2070,7 @@
               "../pg.log"
             ],
             "commits": [
-              "4bd50846da07863244872b5e6efe4ffa70d0e3d4"
+              "25bb3f011230f87bd5250efe728f4b2c6301f615"
             ]
           },
           "content": "Another one is `MAX`, use it to see the largest `gpa` of the same table.",
@@ -2095,7 +2095,7 @@
               "../pg.log"
             ],
             "commits": [
-              "267a86743a7016e42f2c997b849e7c5bd2ae861c"
+              "d62e49fa18e4833deef62e9256d8775757292ed4"
             ]
           },
           "content": "In the same fashion, use a `SUM` function find out what all the values of the `major_id` column in the `students` table add up to.",
@@ -2121,7 +2121,7 @@
               "../pg.log"
             ],
             "commits": [
-              "2875ae42333e3748992204e10477ed32b9631a42"
+              "041bc0beeb5ebff949dcdd7b5fba7743b66423cd"
             ]
           },
           "content": "`AVG` will give you the average of all the values in a column. Use it to see the average of the same column.",
@@ -2148,7 +2148,7 @@
               "../pg.log"
             ],
             "commits": [
-              "43dde91b2dd353bc60c565422d96b6d6810941b3"
+              "c51b392ffc13da3ebe0ae6bc1cf2933885fa8634"
             ]
           },
           "content": "You can round decimals up or down to the nearest whole number with `CEIL` and `FLOOR`, respectively. Use `CEIL` to round the average `major_id` up to the nearest whole number. Here's an example: `CEIL(<number_to_round>)`.",
@@ -2175,7 +2175,7 @@
               "../pg.log"
             ],
             "commits": [
-              "9ae81bf3cfc7dc49f7e1f39fffc89ac5d3a16eb1"
+              "f7b278d75b1cd395140beaa96ec7cf0a9f06df91"
             ]
           },
           "content": "Or, you can round a number to the nearest whole number with `ROUND`. Use it to round the average of the `major_id` column to the nearest whole number.",
@@ -2202,7 +2202,7 @@
               "../pg.log"
             ],
             "commits": [
-              "684a83967d3d614abf920eab5475ddfb25155b00"
+              "bdedb7f46d21bb612b7c26bb2d54a1be0e4c5fc7"
             ]
           },
           "content": "You can round to a specific number of decimal places by adding a comma and number to `ROUND`, like this: `ROUND(<number_to_round>, <decimals_places>)`. Round the average of the `major_id` to five decimal places.",
@@ -2228,7 +2228,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "e6b0fd21aee6ec09380dbbb5fa776b1dd0bce7af"
+              "d5a3fe6809692432c0be1973570a4e38f31221d1"
             ]
           },
           "content": "You should be able to find what your script is asking for now. Add the command to print it.",
@@ -2255,7 +2255,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "82a5fcb64a662e928894ea2e588025f235e78a4a"
+              "f7803af0bfa1ad17c4a2d61022ad4d7c0b09c803"
             ]
           },
           "content": "Run the script to see the average GPA of all your students.",
@@ -2280,7 +2280,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "ce23a9136c887dbb0ef4f1c2f07ac4c92eab4e4b"
+              "dd1836792cd5710d958cc809d7a271a43f4fc674"
             ]
           },
           "content": "They're doing pretty good. Add another command to print `Major ID, total number of students in a column named 'number_of_students', and average GPA rounded to two decimal places in a column name 'average_gpa', for each major ID in the students table having a student count greater than 1:`",
@@ -2306,7 +2306,7 @@
               "../pg.log"
             ],
             "commits": [
-              "8ebde59e93e3ba4bbaac69e09ad8a767e82f60ca"
+              "7ffdf736d53641d760865864291f045d867c4b6f"
             ]
           },
           "content": "Another function is `COUNT`. You can use it like this: `COUNT(<column>)`. It will tell you how many entries are in a table for the column. Try it out in the psql prompt by using `COUNT(*)` to see how many majors there are.",
@@ -2333,7 +2333,7 @@
               "../pg.log"
             ],
             "commits": [
-              "10420ad72b17b046a31831a78649aff6f755ae3e"
+              "1107ae67c4f98264fb2b5170c427074f44e409c5"
             ]
           },
           "content": "Using the same method, check how many students you have.",
@@ -2361,7 +2361,7 @@
               "../pg.log"
             ],
             "commits": [
-              "4c04cfbd3192e6b73a843fc23adec7598d2e8fe7"
+              "481486ce94d80bfea2624c13b07c5535a42d2eb8"
             ]
           },
           "content": "Using `*` like that told you how many total rows are in the table. View the count of the `major_id` column in the `students` table to see how many of your students have picked a major.",
@@ -2388,7 +2388,7 @@
               "../pg.log"
             ],
             "commits": [
-              "862ee37394b56d7d6d98097a28e01cfa178d7416"
+              "55064a4ae80a481fa00ae54bf84bfd16a474f179"
             ]
           },
           "content": "Using `major_id` didn't count the `null` values in that column. 23 students have a major. `DISTINCT` is a function that will show you only unique values. You can use it like this: `DISTINCT(<column>)`. View the unique `major_id` values in the `students` table.",
@@ -2415,7 +2415,7 @@
               "../pg.log"
             ],
             "commits": [
-              "ecc53a736579e00e55e1af01fc3e28eb5c6b0a9f"
+              "5116f32cc4994aac6c05ff95ea2d76d1b4559bdc"
             ]
           },
           "content": "There's six unique `major_id` values in the `students` table. You can get the same results with `GROUP BY`. Here's an example of how to use it: `SELECT <column> FROM <table> GROUP BY <column>`. Use this method to view the unique `major_id` values in the `students` table again.",
@@ -2443,7 +2443,7 @@
               "../pg.log"
             ],
             "commits": [
-              "0f7777404854667e36ff9b29e3e019f2945d42ac"
+              "b6294dd1438d9c1fc13b4159824b50c8703944cb"
             ]
           },
           "content": "The output was the same as `DISTINCT`, but with `GROUP BY` you can add any of the aggregate functions (`MIN`, `MAX`, `COUNT`, etc) to it to find more information. For instance, if you wanted to see how many students were in each major you could use `SELECT COUNT(*) FROM students GROUP BY major_id`. View the `major_id` column **and** number of students in each `major_id`.",
@@ -2470,7 +2470,7 @@
               "../pg.log"
             ],
             "commits": [
-              "9f380fe90de7e6a3455b6015683b7dd67056505c"
+              "a2e46c4671e000ef43f2f0d5820e7c7c35790786"
             ]
           },
           "content": "When using `GROUP BY`, any columns in the `SELECT` area must be included in the `GROUP BY` area. Other columns must by used with any of the aggregate functions (`MAX`, `AVG`, `COUNT`, etc). View the unique `major_id` values with `GROUP BY` again, but see what the lowest GPA is in each of them.",
@@ -2497,7 +2497,7 @@
               "../pg.log"
             ],
             "commits": [
-              "f9abc8e305648e3d9abf6850b2696ae4913448b2"
+              "007580630952c975f21c16603865dbab9867ff1b"
             ]
           },
           "content": "Nice job. Enter the same query, but add a column that shows you the highest GPA in each major as well.",
@@ -2523,7 +2523,7 @@
               "../pg.log"
             ],
             "commits": [
-              "cefa0d3d4c15b0f5e7d61f53d1896401b45b76ef"
+              "b469a7e6008729826e52c3011ec158fc36f507c0"
             ]
           },
           "content": "Another option with `GROUP BY` is `HAVING`. You can add it at the end like this: `SELECT <column> FROM <table> GROUP BY <column> HAVING <condition>`. The condition must be an aggregate function with a test. An example to might be to use `HAVING COUNT(*) > 0` to only show what whatever column is grouped that have at least one row. Use `HAVING` to only show rows from the last query that have a maximum GPA of 4.0.",
@@ -2551,7 +2551,7 @@
               "../pg.log"
             ],
             "commits": [
-              "9be3118714bf51e7721dc1ce2aaa4597941463bd"
+              "d7a68a37b148bfe2e853b9d56372656b36392152"
             ]
           },
           "content": "Two of your majors have at least one student with a 4.0 GPA. Looking at the results, the column is named `min`. You can rename a column with `AS` like this: `SELECT <column> AS <new_column_name>` Enter the same command, but rename the `min` column to `min_gpa`.",
@@ -2578,7 +2578,7 @@
               "../pg.log"
             ],
             "commits": [
-              "885373ed455ed2e63f26fcd3975716992a5d43dd"
+              "60e3d58802feb3ba265304aa5b446d8ae139544b"
             ]
           },
           "content": "Now the column has a better name. Enter the same command, but rename the `max` column to `max_gpa` as well.",
@@ -2605,7 +2605,7 @@
               "../pg.log"
             ],
             "commits": [
-              "08a5a105888c0a088000356319456e8b522cf6ef"
+              "c4ce8db23175b6393bf00c5d804c51c8d95b6c34"
             ]
           },
           "content": "That's more descriptive. View the `major_id` and number of students in each `major_id` in a column named `number_of_students`.",
@@ -2632,7 +2632,7 @@
               "../pg.log"
             ],
             "commits": [
-              "bc66bac7a9c0d5533fa9020e2509c6c896912c56"
+              "188aff113067a589f756ffa7954642243b0e7f77"
             ]
           },
           "content": "Use `HAVING` with the last query to only show the rows with less than eight students in the major.",
@@ -2659,7 +2659,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "ee490ddc3d01b17fe2bfce3c28404901b6d7c46f"
+              "2545555284b77609857735a3f9eda93fe8f0c59a"
             ]
           },
           "content": "Well done. Back in your script, add the command the print the suggested results.",
@@ -2686,7 +2686,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "6db60238ffcb209b0ba8c65f6de61b9e01ed0912"
+              "36c7a3a553c7841a6ce8d4221a9a323855d3d6a3"
             ]
           },
           "content": "Run the script to see the output.",
@@ -2711,7 +2711,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "53925ead69bf982115d6dbcd3342eb1b1565b07f"
+              "2d2ec3ebf656c4d81d7430e79b53c0af0c8d7db7"
             ]
           },
           "content": "Add an echo command to your script like the others that prints `List of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case insensitive 'ma':`",
@@ -2737,7 +2737,7 @@
               "../pg.log"
             ],
             "commits": [
-              "b9cdaf9bf659395e99d1fe63704aba5975c62ba1"
+              "f7a58e22d608bedeeeed00c4eaa9b299b0493d12"
             ]
           },
           "content": "The `majors` and `students` table are linked with the `major_id` foreign key. If you want to see the name of a major that a student is taking, you need to `JOIN` the two tables into one. Here's an example of how to do that:\n`SELECT * FROM <table_1> FULL JOIN <table_2> ON <table_1>.<foreign_key_column> = <table_2>.<foreign_key_column>;`\n\nIn the psql prompt, join the two tables together with the above method.",
@@ -2762,7 +2762,7 @@
               "../pg.log"
             ],
             "commits": [
-              "a7bfa1c6092c8adbc1ab0098d2ff7297421afdd3"
+              "260fb5c75848142b623f1314c4ba8d6f1b23387f"
             ]
           },
           "content": "It's showing all the columns from both tables, the two `major_id` columns are the same in each row for the ones that have it. You can see that there are some students without a major, and some majors without any students. The `FULL JOIN` you used will include **all** rows from both tables, whether or not they have a row using that foreign key in the other. From there, you could use any of the previous methods to narrow down, group, order, etc. Use a `LEFT JOIN` to join the same two tables in the same way.",
@@ -2789,7 +2789,7 @@
               "../pg.log"
             ],
             "commits": [
-              "7378a3a7c5bbfac1bbb2f9ae6fe080ab8e4dd5f7"
+              "7522d7eef8c8209cf62e97154ddb8d1ac11d5c0d"
             ]
           },
           "content": "There's a few less rows than the last query. In the `LEFT JOIN` you used, the `students` table was the left table since it was on the left side of the `JOIN`. `majors` was the right table. A `LEFT JOIN` gets all rows from the left table, but only rows from the right table that are linked to from the left one. Looking at the data, you can see that every student was returned, but the majors without any students were not. Join the same two tables with a `RIGHT JOIN` this time.",
@@ -2816,7 +2816,7 @@
               "../pg.log"
             ],
             "commits": [
-              "9248afa77ccbea5e7c25d5fed1d32d84cb20f09b"
+              "cfbb0c69b1a935c41d78d327e46fec813092cf00"
             ]
           },
           "content": "The right join showed all the rows from the right table (`majors`), but only rows from the left table (`students`) if they have a major. There's one more type you should know about. Join the two tables with an `INNER JOIN`.",
@@ -2843,7 +2843,7 @@
               "../pg.log"
             ],
             "commits": [
-              "5bbe1230486e689ec427be10afdae84a88a5e3d1"
+              "a5e9aa878aa0d700f58f33d57ee8a4dc27886fdf"
             ]
           },
           "content": "The `INNER JOIN` only returned students if they have a major and majors that have a student. In other words, it only returned rows if they have a value in the foreign key column (`major_id`) of the opposite table. You should know a little about the four main types of joins now. Try using a `LEFT JOIN` to show **all the majors** but only students that have a major.",
@@ -2871,7 +2871,7 @@
               "../pg.log"
             ],
             "commits": [
-              "00658f42c33416fb4e1b205aea88108655e5ad16"
+              "1f65c72afe32063ef641e945ff1bf2da360f1341"
             ]
           },
           "content": "Excellent. All the majors are there. Next, use the appropriate join to show only students that are enrolled in a major, and only majors that have a student enrolled in it.",
@@ -2900,7 +2900,7 @@
               "../pg.log"
             ],
             "commits": [
-              "4925a5d991a955f413b8826e274ebfcd43dfd87d"
+              "df474781e8f2161ba60aee78b47fe67fa261b9a3"
             ]
           },
           "content": ":thumbsup: Try using a right join to show all students but only majors if a student is enrolled in it.",
@@ -2928,7 +2928,7 @@
               "../pg.log"
             ],
             "commits": [
-              "7560050f65b1e288ffcfb9ccb782ea84b777882e"
+              "496788f15720946d3d3b32ebb945102eca75d20d"
             ]
           },
           "content": "That showed all the students since it was the right table of the `RIGHT JOIN`. Use the appropriate join with the same two table to show all rows in both tables whether they have a value in the foreign key column or not.",
@@ -2956,7 +2956,7 @@
               "../pg.log"
             ],
             "commits": [
-              "857cd84fb95a449f14c4e5e48c223acaa752396f"
+              "3b5a6fd39f50d21ac7f844af4e256fd9b033aeff"
             ]
           },
           "content": "Lets do some more experiments with joins. Say you wanted to find a list of majors that students are taking. Use the most efficient `JOIN` to only get rows from the tables you need to find that.",
@@ -2985,7 +2985,7 @@
               "../pg.log"
             ],
             "commits": [
-              "be85927c451faa28f4aa2a38c5e446fb17968e0b"
+              "3464525b02dd0046fa75791d8826326b9865fc79"
             ]
           },
           "content": "Good. To get the list, you don't need all the columns, though. Enter the same command, but just get the column you need.",
@@ -3012,7 +3012,7 @@
               "../pg.log"
             ],
             "commits": [
-              "51d14d9d5d7dffe94c64acd772812bcc293bb8aa"
+              "01334f98cc8f36e86b8c4c1b08ee8eed5283edd7"
             ]
           },
           "content": "You also don't want any duplicates. Use `DISTINCT` to only return the unique ones to see the list of majors who have students.",
@@ -3040,7 +3040,7 @@
               "../pg.log"
             ],
             "commits": [
-              "6c19a62a5804ae72af6426a36a249e7431b38772"
+              "6e54fb5042c69328b8b3ec2e172f64f2591f2b37"
             ]
           },
           "content": "There's your list of majors that students are taking :smile: Next, say you wanted a list of majors that students aren't taking. Use the most efficient join to get only the rows needed.",
@@ -3069,7 +3069,7 @@
               "../pg.log"
             ],
             "commits": [
-              "fa2396dda1529bc594b89f2d4b8e56bf1e54c7b2"
+              "5d046bc0f3a084a3f0fb00d7d4b0bb6e404b3459"
             ]
           },
           "content": "That got you all the majors, you can see the ones that don't have any students. Add a `WHERE` condition to only see the majors without students, use `student_id` in it's condition.",
@@ -3098,7 +3098,7 @@
               "../pg.log"
             ],
             "commits": [
-              "634a756db530a9ae7328d0d42d2b7e1ab7ff8e96"
+              "8e198073b2a43d1456a4304365476d57bf72063c"
             ]
           },
           "content": "Now you only have the rows you need. Only get the columns you need with it to see the list of majors without students.",
@@ -3125,7 +3125,7 @@
               "../pg.log"
             ],
             "commits": [
-              "63eae27e71ad8907ba780d5e9a1d8745bf790045"
+              "1da318a17ef4c51128730b162c81a6b890413251"
             ]
           },
           "content": "You're doing great. Next, use the most efficient join to get the rows needed if you were asked to get the first name, last name, major, and GPA of students who are taking Data Science or have a gpa of 3.8 or greater.",
@@ -3153,7 +3153,7 @@
               "../pg.log"
             ],
             "commits": [
-              "beeec6889d4b6522678ee58ec774bee27cb68ece"
+              "3ba17f6599fc2530927f4005332e293078babd5b"
             ]
           },
           "content": "Enter the same command, but use `WHERE` to only get the students that meet the requirements. As a reminder, the goal was to find students who are taking Data Science or have a gpa of 3.8 or greater.",
@@ -3181,7 +3181,7 @@
               "../pg.log"
             ],
             "commits": [
-              "8adda54e46da6b7d6fe909f1e1b11a8df1d775e5"
+              "5d398e152af5a7548f3c4ffbf3510d50d5e48007"
             ]
           },
           "content": "Now, you have narrowed it down the rows you are looking for. Enter the same command, but only get the columns you need. There was four of them, the students first name, last name, their major, and GPA. Get them in that order.",
@@ -3208,7 +3208,7 @@
               "../pg.log"
             ],
             "commits": [
-              "70f5aff43fd6cfa6743e242cb597f7980ba19e7e"
+              "32388d98177737f93974ebd1ab2f88854bb5cf86"
             ]
           },
           "content": "From there, you could put them in a specific order if you wanted or limit the results to a certain number among other things. Lastly, use the join to get the rows needed if you were asked to get the first name and major for students whose `first_name`, or the `major`, contains `ri`.",
@@ -3235,7 +3235,7 @@
               "../pg.log"
             ],
             "commits": [
-              "d84efcc9542b6087c450a92359c10d67174a600b"
+              "b3e6c4bd73aba29ec4a2ba371016b8aa7988bb19"
             ]
           },
           "content": "Add a `WHERE` to the previous query so you only get the rows you need. The rows you wanted were the ones with a first name or major containing `ri`.",
@@ -3264,7 +3264,7 @@
               "../pg.log"
             ],
             "commits": [
-              "c1f679c9827e977d555cf0cc679416ee62cade19"
+              "3b64936dc59214a5de150f1d63074185bd8cb5bf"
             ]
           },
           "content": "Finally, you only wanted to display the `first_name` and `major` columns. Enter the previous query, but only get the columns you need.",
@@ -3290,7 +3290,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "03d27c92a12a4ca584d6ab119daa982e2e54ce7b"
+              "48f92f41d87d3fe537934d672a65ab2375057c02"
             ]
           },
           "content": "In your script, add the command to print what the sentence is asking for.",
@@ -3317,7 +3317,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "8032c8dbb52c9a767c15ee1257e9127e76561647"
+              "c496e361ab71fb17c92f5228b23785a8fd1484f4"
             ]
           },
           "content": "Run the script to see the majors described.",
@@ -3342,7 +3342,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "cd3a18b8cbf96e8b72c21329c3ef2e514ff579d8"
+              "0f9fba5031585f9c0d8f9fe10be65da3b61efc73"
             ]
           },
           "content": ":smile: Almost done. In your script, add a command to print this sentence like the others: `List of unique courses, in reverse alphabetical order, that no student or 'Obie Hilpert' is taking:`",
@@ -3368,7 +3368,7 @@
               "../pg.log"
             ],
             "commits": [
-              "e4cf78603ec570467d28043c78e6410bcf1d3e43"
+              "d105249c002205fc9843c296b7da7ade09217171"
             ]
           },
           "content": "Lets go over a few more things before you figure out how to see the courses a student is taking. Start by doing a `FULL JOIN` on your `students` and `majors` tables.",
@@ -3393,7 +3393,7 @@
               "../pg.log"
             ],
             "commits": [
-              "47e1d7e116fa4b4ba4fbc560a0ff8536e8c2a388"
+              "6db978c3a88fd676b8cd58db17725879d4cbc7a7"
             ]
           },
           "content": "If you look at the column names, it shows two `major_id` columns. One from the `students` table and one from the `majors` table. If you were to try and query it using `major_id`, you would get an error. You would need to specify what table you want the column from like this: `<table>.<column>`. Enter the same join but only get the `major_id` column from the `students` table.",
@@ -3419,7 +3419,7 @@
               "../pg.log"
             ],
             "commits": [
-              "d01fae0034a7c8b48c20d83ce9b58b148e92df4c"
+              "0996431506331c8ba8627942af0df58d86f6a4d5"
             ]
           },
           "content": "Earlier, you used `AS` to rename columns. You can use it to rename tables, or give them aliases, as well. Here's an example: `SELECT * FROM <table> AS <new_name>;`. Enter the same query you just entered, but rename the `majors` table to `m`. Anywhere the `majors` table is referenced, you will need to use `m` instead of `majors`.",
@@ -3445,7 +3445,7 @@
               "../pg.log"
             ],
             "commits": [
-              "261c0b4642d511be9838c64466d63762cba123ec"
+              "bbd93f1b6f0e45f34d8beac7c5a68950ae9a6f61"
             ]
           },
           "content": "This doesn't affect the output. It can just make some queries easier to read. Enter the same query, but rename the `students` table to `s` as well.",
@@ -3471,7 +3471,7 @@
               "../pg.log"
             ],
             "commits": [
-              "752ef1a2cc1688a764ffa7d14ac5d1bed5173fe4"
+              "cb3731c54bee108322844846ac0dbe4c757016cf"
             ]
           },
           "content": "There's a shortcut keyword, `USING` to join tables if the foreign key column has the same name in both tables. Here's an example: `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>);`. Use this method to see **all** the columns in the `students` and `majors` table. Don't use any aliases.",
@@ -3495,7 +3495,7 @@
               "../pg.log"
             ],
             "commits": [
-              "6f108a0c498ac6bce4fbc9f24b5ee6000fedca7f"
+              "d66c228f9d6e399c4a746390bab84c81379607ee"
             ]
           },
           "content": "Note that the two `major_id` columns were turned into one with `USING`. In order to find out what courses a student is taking, you will need to join all the tables together. You can add a third table to a join like this: `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>) FULL JOIN <table_3> USING(<column>)`. This example will join the first two tables into one, turning it into the left table for the second join. Use this method to join the two tables from the previous query with the `majors_courses` table.",
@@ -3522,7 +3522,7 @@
               "../pg.log"
             ],
             "commits": [
-              "e436c28d0f3d76cea679ab4194cbe3558368dfa5"
+              "c7f6c0df1e6fa5012fd1f04e031e1798eb7eadba"
             ]
           },
           "content": "You may need to adjust the terminal size to align the output. What you're seeing is every unique combination of rows in the database. Students with a major are listed multiple times, one for each course included in the major. The majors without any students are there along with the courses for them. The students without a major are included, they have no courses and are only listed once. You can join as many tables together as you want. Join the last table to the previous command to get the names of the courses with all this info.",
@@ -3549,7 +3549,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "c2a53996ddfdfdaba8a997127969661932877fda"
+              "4ad24691df6af2adfa75fb486d9316072801b63b"
             ]
           },
           "content": "Same amount of rows, but you get the course names now. In your script, add the command to print the suggested info.",
@@ -3576,7 +3576,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c6beb64717b62b6fc17db95bfb65ee9595cbae30"
+              "35fc4b8672d5e1814907fa20df52d8b40f2b4baa"
             ]
           },
           "content": "Run the script to see courses described.",
@@ -3601,7 +3601,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "dacc96d33defba36df69265024e9ee605011a3ba"
+              "46d324a83545afee3db6d730ca6181d0a36b7da1"
             ]
           },
           "content": "Last one. Add a command that prints `List of courses, in alphabetical order, with only one student enrolled:`.",
@@ -3627,7 +3627,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "fe7ac18e94dc513ab0ba92107cc08ea8a5641b94"
+              "a5e18f4fc71f26330ea2d592bf48c5d1aba40ff6"
             ]
           },
           "content": "Go for it.",
@@ -3660,7 +3660,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "afdb7344795d4ea03297a9d9295d9e712577e2b2"
+              "2823ba5932f446b407ae988fa6f027bd97ec1884"
             ]
           },
           "content": "This is the last step, you have done really well. Run the script one last time. :wave:",
