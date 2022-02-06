@@ -1941,7 +1941,7 @@ UNIX
 - I don't know how to get it either
 - So there's no answers here
 - :confused:
-- Try entering this in the psql prompt: `SELECT COUNT(course), COURSE FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id) FULL JOIN courses USING(course_id) GROUP BY course;`
+- Try entering this in the psql prompt: `SELECT course FROM students INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) GROUP BY course HAVING COUNT(student_id) = 1 ORDER BY course;`
 - Add `echo "$($PSQL "SELECT course FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) GROUP BY course HAVING COUNT(course) = 1 ORDER BY course")"` to the bottom of the `student_info.sh` file
 
 ## 2460. ./student_info.sh
