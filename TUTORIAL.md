@@ -1931,7 +1931,8 @@ Go for it.
 - Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
 - If you run your script, the last echo statement should print:
 ```sh
-Network Security
+Computer Systems
+Computer Network
 Server Administration
 UNIX
 ```
