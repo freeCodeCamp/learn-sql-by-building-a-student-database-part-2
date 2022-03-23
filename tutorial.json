@@ -1,6 +1,6 @@
 {
   "id": "freeCodeCamp/learn-sql-by-building-a-student-database-part-2:v1.0.0",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "summary": {
     "title": "Learn SQL by Building a Student Database: Part 2",
     "description": "> Welcome to Part 2 of the Build a Student Database Lessons!"
@@ -24,7 +24,7 @@
     },
     "repo": {
       "uri": "https://github.com/freeCodeCamp/learn-sql-by-building-a-student-database-part-2",
-      "branch": "v1.0.2"
+      "branch": "v1.0.3"
     },
     "continue": {
       "commands": [
@@ -3627,22 +3627,22 @@
               "./student_info.sh"
             ],
             "commits": [
-              "a5e18f4fc71f26330ea2d592bf48c5d1aba40ff6"
+              "0d45ae6dc0b620271e0234bed8a94f7d9485721a"
             ]
           },
           "content": "Go for it.",
           "hints": [
             "Add a command at the bottom of the script to print the suggested information",
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
-            "If you run your script, the last echo statement should print:\n```sh\nNetwork Security\nServer Administration\nUNIX\n```",
+            "If you run your script, the last echo statement should print:\n```sh\nComputer Networks\nComputer Systems\nServer Administration\nUNIX\n```",
             "Practice the query in the psql prompt to make sure it's getting what you want",
             "You can do this",
             "Give it another try",
             "I don't know how to get it either",
             "So there's no answers here",
             ":confused:",
-            "Try entering this in the psql prompt: `SELECT COUNT(course), COURSE FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id) FULL JOIN courses USING(course_id) GROUP BY course;`",
-            "Add `echo \"$($PSQL \"SELECT course FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) GROUP BY course HAVING COUNT(course) = 1 ORDER BY course\")\"` to the bottom of the `student_info.sh` file"
+            "Try entering this in the psql prompt: `SELECT COUNT(course), COURSE FROM students INNER JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) GROUP BY course;`",
+            "Add `echo \"$($PSQL \"SELECT course FROM students INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) GROUP BY course HAVING COUNT(student_id) = 1 ORDER BY course\")\"` to the bottom of the `student_info.sh` file"
           ]
         }
       ]
@@ -3660,7 +3660,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2823ba5932f446b407ae988fa6f027bd97ec1884"
+              "e16842c3e25877cffab78f88adb6fed91925d3ea"
             ]
           },
           "content": "This is the last step, you have done really well. Run the script one last time. :wave:",
