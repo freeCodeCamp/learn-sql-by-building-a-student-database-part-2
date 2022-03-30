@@ -18,3 +18,7 @@ Whenever a new version is created, add the new branch name and the changes here
 ## [v1.0.2]
 
 - Only disconnect user `freecodecamp` from db when resetting
+
+## [v1.0.3]
+
+- Fix SQL query and expected result in exercise 2450 - 'Add echo query result'
