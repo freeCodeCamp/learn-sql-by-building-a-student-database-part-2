@@ -22,3 +22,6 @@ Whenever a new version is created, add the new branch name and the changes here
 ## [v1.0.3]
 
 - Fix SQL query and expected result in exercise 2450 - 'Add echo query result'
+
+## [v1.0.4]
+- Fix instructions on exercise 2250.1.
