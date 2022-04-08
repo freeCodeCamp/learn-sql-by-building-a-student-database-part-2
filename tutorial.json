@@ -477,7 +477,7 @@
           "hints": [
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nFirst name, last name, and GPA of students with a 4.0 GPA:\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nFirst name, last name, and GPA of students with a 4.0 GPA:\"\n```"
           ]
         }
       ]
@@ -664,7 +664,7 @@
             "You previously used, `SELECT first_name, last_name, gpa FROM students WHERE gpa != 4.0;` in the psql prompt",
             "The condition you want here is `WHERE gpa = 4.0`",
             "Practice the query in the psql prompt to make sure it's getting what you want",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\nCasares|Hijo|4.0\r\nVanya|Hassanah|4.0\r\nDejon|Howell|4.0\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\nCasares|Hijo|4.0\nVanya|Hassanah|4.0\nDejon|Howell|4.0\n```",
             "Add `echo \"$($PSQL \"SELECT first_name, last_name, gpa FROM students WHERE gpa = 4.0\")\"` to the bottom of the `student_info.sh` file"
           ]
         }
@@ -716,7 +716,7 @@
             "Use `echo` with the `-e` flag and a new line character",
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nAll course names whose first letter is before 'D' in the alphabet:\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nAll course names whose first letter is before 'D' in the alphabet:\"\n```"
           ]
         }
       ]
@@ -910,7 +910,7 @@
             "The condition you want here is `WHERE course < 'D'`",
             "You only want to get the `course` column from the `courses` table",
             "Practice the query in the psql prompt to make sure it's getting what you want",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\nComputer Networks\r\nComputer Systems\r\nArtificial Intelligence\r\nCalculus\r\nAlgorithms\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\nComputer Networks\nComputer Systems\nArtificial Intelligence\nCalculus\nAlgorithms\n```",
             "Add `echo \"$($PSQL \"SELECT course FROM courses WHERE course < 'D'\")\"` to the bottom of the `student_info.sh` file"
           ]
         }
@@ -962,7 +962,7 @@
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nFirst name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nFirst name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:\"\n```"
           ]
         }
       ]
@@ -1150,7 +1150,7 @@
             "You previously used `SELECT * FROM students WHERE last_name < 'M' AND (gpa = 3.9 OR gpa < 2.3);` in the psql prompt",
             "Practice the query in the psql prompt to make sure it's getting what you want",
             "The conditions should be `last_name >= 'R' AND (gpa > 3.8 OR gpa < 2.0)`",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\nEfren|Reilly|3.9\r\nMariana|Russel|1.8\r\nMehdi|Vandenberghe|1.9\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\nEfren|Reilly|3.9\nMariana|Russel|1.8\nMehdi|Vandenberghe|1.9\n```",
             "Add `echo \"$($PSQL \"SELECT first_name, last_name, gpa FROM students WHERE last_name >= 'R' AND (gpa > 3.8 OR gpa < 2.0)\")\"` to the bottom of the `student_info.sh` file"
           ]
         }
@@ -1202,7 +1202,7 @@
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nLast name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nLast name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:\"\n```"
           ]
         }
       ]
@@ -1523,7 +1523,7 @@
             "You previously used `SELECT * FROM courses WHERE course NOT ILIKE '%A%' AND course LIKE '% %';` in the psql prompt",
             "Practice the query in the psql prompt to make sure it's getting what you want",
             "The conditions should be `last_name ILIKE '%sa%' OR last_name LIKE %r_`",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\nGilbert\r\nSavage\r\nSaunders\r\nHilpert\r\nHassanah\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\nGilbert\nSavage\nSaunders\nHilpert\nHassanah\n```",
             "Add `echo \"$($PSQL \"SELECT last_name FROM students WHERE last_name ILIKE '%sa%' OR last_name LIKE '%r_'\")\"` to the bottom of the `student_info.sh` file"
           ]
         }
@@ -1575,7 +1575,7 @@
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nFirst name, last name, and GPA of students who have not selected a major and either their first name begins with 'D' or they have a GPA greater than 3.0:\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nFirst name, last name, and GPA of students who have not selected a major and either their first name begins with 'D' or they have a GPA greater than 3.0:\"\n```"
           ]
         }
       ]
@@ -1762,7 +1762,7 @@
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
             "Practice the query in the psql prompt to make sure it's getting what you want",
             "You will need to use the `SELECT`, `FROM`, `WHERE`, `IS NULL`, `AND`, `LIKE`, and `OR` keywords",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\nNoe|Savage|3.6\r\nDanh|Nhung|2.4\r\nHugo|Duran|3.8\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\nNoe|Savage|3.6\nDanh|Nhung|2.4\nHugo|Duran|3.8\n```",
             "You previously used `SELECT * FROM students WHERE last_name < 'M' AND (gpa = 3.9 OR gpa < 2.3);` in the psql prompt",
             "Here's an example of the conditions you want: `WHERE <condition_1> AND (<condition_2> OR <condition_3>)`",
             "The conditions should look like this: `WHERE major_id IS NULL AND (first_name LIKE 'D%' OR gpa > 3.0)`",
@@ -1817,7 +1817,7 @@
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nCourse name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nCourse name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':\"\n```"
           ]
         }
       ]
@@ -1974,7 +1974,7 @@
           "content": "In your script, add the `echo` command to print the rows the sentence is asking for.",
           "hints": [
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\nWeb Programming\r\nWeb Applications\r\nServer Administration\r\nNetwork Security\r\nDatabase Systems\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\nWeb Programming\nWeb Applications\nServer Administration\nNetwork Security\nDatabase Systems\n```",
             "Practice the query in the psql prompt to make sure it's getting what you want",
             "You will need the `SELECT`, `FROM`, `WHERE`, `LIKE`, `OR`, `ORDER BY`, `DESC`, and `LIMIT` keywords",
             "Add `echo \"$($PSQL \"SELECT course FROM courses WHERE course LIKE '_e%' OR course LIKE '%s' ORDER BY course DESC LIMIT 5\")\"` to the bottom of the `student_info.sh` file"
@@ -2028,7 +2028,7 @@
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nAverage GPA of all students rounded to two decimal places:\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nAverage GPA of all students rounded to two decimal places:\"\n```"
           ]
         }
       ]
@@ -2234,7 +2234,7 @@
           "content": "You should be able to find what your script is asking for now. Add the command to print it.",
           "hints": [
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\n3.09\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\n3.09\n```",
             "Practice the query in the psql prompt to make sure it's getting what you want",
             "You previously used `SELECT ROUND(AVG(major_id), 5) FROM students;` in the psql prompt",
             "Add `echo \"$($PSQL \"SELECT ROUND(AVG(gpa), 2) FROM students\")\"` to the bottom of the `student_info.sh` file"
@@ -2288,7 +2288,7 @@
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nMajor ID, total number of students in a column named 'number_of_students', and average GPA rounded to two decimal places in a column name 'average_gpa', for each major ID in the students table having a student count greater than 1:\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nMajor ID, total number of students in a column named 'number_of_students', and average GPA rounded to two decimal places in a column name 'average_gpa', for each major ID in the students table having a student count greater than 1:\"\n```"
           ]
         }
       ]
@@ -2665,7 +2665,7 @@
           "content": "Well done. Back in your script, add the command the print the suggested results.",
           "hints": [
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\n|8|2.97\r\n37|6|3.38\r\n36|6|2.92\r\n41|6|3.53\r\n38|4|2.73\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\n|8|2.97\n37|6|3.38\n36|6|2.92\n41|6|3.53\n38|4|2.73\n```",
             "Practice the query in the psql prompt to make sure it's getting what you want",
             "You previously used `SELECT major_id, COUNT(*) AS number_of_students FROM students GROUP BY major_id HAVING COUNT(*) < 8;` in the psql prompt",
             "Add `echo \"$($PSQL \"SELECT major_id, COUNT(*) AS number_of_students, ROUND(AVG(gpa),2) AS average_gpa FROM students GROUP BY major_id HAVING COUNT(*) > 1\")\"` to the bottom of the `student_info.sh` file"
@@ -2719,7 +2719,7 @@
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nList of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case insensitive 'ma':\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nList of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case insensitive 'ma':\"\n```"
           ]
         }
       ]
@@ -2740,7 +2740,7 @@
               "f7a58e22d608bedeeeed00c4eaa9b299b0493d12"
             ]
           },
-          "content": "The `majors` and `students` table are linked with the `major_id` foreign key. If you want to see the name of a major that a student is taking, you need to `JOIN` the two tables into one. Here's an example of how to do that:\r\n`SELECT * FROM <table_1> FULL JOIN <table_2> ON <table_1>.<foreign_key_column> = <table_2>.<foreign_key_column>;`\r\n\r\nIn the psql prompt, join the two tables together with the above method.",
+          "content": "The `majors` and `students` table are linked with the `major_id` foreign key. If you want to see the name of a major that a student is taking, you need to `JOIN` the two tables into one. Here's an example of how to do that:\n`SELECT * FROM <table_1> FULL JOIN <table_2> ON <table_1>.<foreign_key_column> = <table_2>.<foreign_key_column>;`\n\nIn the psql prompt, join the two tables together with the above method.",
           "hints": [
             "Join the `students` and `majors` table with the method in the example. Use the `students` table first where applicable",
             "Enter `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;` in the psql prompt",
@@ -3296,7 +3296,7 @@
           "content": "In your script, add the command to print what the sentence is asking for.",
           "hints": [
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\nComputer Programming\r\nDatabase Administration\r\nNetwork Engineering\r\nWeb Development\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\nComputer Programming\nDatabase Administration\nNetwork Engineering\nWeb Development\n```",
             "Practice the query in the psql prompt to make sure it's getting what you want",
             "You previously used `SELECT first_name, major FROM students FULL JOIN majors ON students.major_id = majors.major_id WHERE first_name LIKE '%ri%' OR major LIKE '%ri%';` in the psql prompt",
             "Add `echo \"$($PSQL \"SELECT major FROM students FULL JOIN majors ON students.major_id = majors.major_id WHERE major IS NOT NULL AND (student_id IS NULL OR first_name ILIKE '%ma%') ORDER BY major\")\"` to the bottom of the `student_info.sh` file"
@@ -3350,7 +3350,7 @@
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nList of unique courses, in reverse alphabetical order, that no student or 'Obie Hilpert' is taking:\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nList of unique courses, in reverse alphabetical order, that no student or 'Obie Hilpert' is taking:\"\n```"
           ]
         }
       ]
@@ -3555,7 +3555,7 @@
           "content": "Same amount of rows, but you get the course names now. In your script, add the command to print the suggested info.",
           "hints": [
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\nWeb Programming\r\nWeb Applications\r\nPython\r\nObject-Oriented Programming\r\nNetwork Security\r\nData Structures and Algorithms\r\nComputer Systems\r\nComputer Networks\r\nAlgorithms\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\nWeb Programming\nWeb Applications\nPython\nObject-Oriented Programming\nNetwork Security\nData Structures and Algorithms\nComputer Systems\nComputer Networks\nAlgorithms\n```",
             "Practice the query in the psql prompt to make sure it's getting what you want",
             "You previously used `SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id) FULL JOIN courses USING(course_id);` in the psql prompt",
             "Add `echo \"$($PSQL \"SELECT DISTINCT(course) FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) WHERE (first_name = 'Obie' AND last_name = 'Hilpert') OR student_id IS NULL ORDER BY course DESC\")\"` to the bottom of the `student_info.sh` file"
@@ -3609,7 +3609,7 @@
             "At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence",
             "The new line character is `\\n`",
             "Here's an example of the command: `echo -e \"\\n<text_here>\"`",
-            "At the bottom of the `student_info.sh` file, add this:\r\n```sh\r\necho -e \"\\nList of courses, in alphabetical order, with only one student enrolled:\"\r\n```"
+            "At the bottom of the `student_info.sh` file, add this:\n```sh\necho -e \"\\nList of courses, in alphabetical order, with only one student enrolled:\"\n```"
           ]
         }
       ]
@@ -3634,7 +3634,7 @@
           "hints": [
             "Add a command at the bottom of the script to print the suggested information",
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
-            "If you run your script, the last echo statement should print:\r\n```sh\r\nComputer Networks\r\nComputer Systems\r\nServer Administration\r\nUNIX\r\n```",
+            "If you run your script, the last echo statement should print:\n```sh\nComputer Networks\nComputer Systems\nServer Administration\nUNIX\n```",
             "Practice the query in the psql prompt to make sure it's getting what you want",
             "You can do this",
             "Give it another try",
