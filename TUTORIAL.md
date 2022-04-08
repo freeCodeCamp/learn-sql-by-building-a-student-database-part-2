@@ -1645,7 +1645,7 @@ Now you only have the rows you need. Only get the columns you need with it to se
 
 ### 2250.1
 
-You're doing great. Next, use the most efficient join to get the rows needed if you were asked to get the first name, last name, major, and GPA of students who are taking Data Science or have a gpa of 3.8 or greater. While we will be narrowing down later, get the data from all the columns now.
+You're doing great. Next, use the most efficient join to get the rows needed if you were asked to get the first name, last name, major, and GPA of students who are taking Data Science or have a gpa of 3.8 or greater. Select all the columns without adding any conditions for now.
 
 #### HINTS
 
