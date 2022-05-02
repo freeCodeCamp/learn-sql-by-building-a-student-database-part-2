@@ -351,7 +351,7 @@ Practice first. In the psql prompt, view all the data in the `majors` table.
 #### HINTS
 
 - Use the `SELECT` and `FROM` keywords with `*` to view all the data
-- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `SELECT * FROM majors;` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1400. psql SELECT WHERE major = Game Design
@@ -621,7 +621,7 @@ Start by viewing everything from the `courses` table in the psql prompt to see h
 #### HINTS
 
 - Use the `SELECT` and `FROM` keywords with `*` to view all the data
-- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `SELECT * FROM courses;` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1580. psql SELECT WHERE course LIKE _lgorithms
@@ -849,8 +849,8 @@ Inversely, you can use `IS NOT NULL` to see rows that aren't null. View all the 
 
 - Use the `SELECT`, `FROM`, `WHERE`, and `IS NOT NULL` keywords with `*` to view the suggested rows
 - Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
-- The condition you want is `gpa IS NULL`
-- Enter `SELECT * FROM students WHERE gpa IS NULL;` in the psql prompt
+- The condition you want is `gpa IS NOT NULL`
+- Enter `SELECT * FROM students WHERE gpa IS NOT NULL;` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1740. psql SELECT WHERE major IS NULL
@@ -1554,7 +1554,7 @@ That showed all the students since it was the right table of the `RIGHT JOIN`. U
 
 ### 2200.1
 
-Lets do some more experiments with joins. Say you wanted to find a list of majors that students are taking. Use the most efficient `JOIN` to only get rows from the tables you need to find that.
+Lets do some more experiments with joins. Say you wanted to find a list of majors that students are taking. Use the most efficient `JOIN` to join the two tables you need. Only join the tables for now, don't use any other conditions.
 
 #### HINTS
 
@@ -1599,7 +1599,7 @@ You also don't want any duplicates. Use `DISTINCT` to only return the unique one
 
 ### 2230.1
 
-There's your list of majors that students are taking :smile: Next, say you wanted a list of majors that students aren't taking. Use the most efficient join to get only the rows needed.
+There's your list of majors that students are taking :smile: Next, say you wanted a list of majors that students aren't taking. Use the most efficient `JOIN` to join the two tables you need. Only join the tables for now, don't use any other conditions.
 
 #### HINTS
 
@@ -1645,7 +1645,7 @@ Now you only have the rows you need. Only get the columns you need with it to se
 
 ### 2250.1
 
-You're doing great. Next, use the most efficient join to get the rows needed if you were asked to get the first name, last name, major, and GPA of students who are taking Data Science or have a gpa of 3.8 or greater. Select all the columns without adding any conditions for now.
+You're doing great. Next, use the most efficient 'JOIN' to join the tables you would need if you were asked to get the first name, last name, major, and GPA of students who are taking Data Science or have a gpa of 3.8 or greater. Only join the tables for now, don't use any other conditions.
 
 #### HINTS
 
@@ -1689,7 +1689,7 @@ Now, you have narrowed it down the rows you are looking for. Enter the same comm
 
 ### 2270.1
 
-From there, you could put them in a specific order if you wanted or limit the results to a certain number among other things. Lastly, use the join to get the rows needed if you were asked to get the first name and major for students whose `first_name`, or the `major`, contains `ri`.
+From there, you could put them in a specific order if you wanted or limit the results to a certain number among other things. Lastly, use the most efficient 'JOIN' to join the tables you would need if you were asked to get the first name and major for students whose `first_name`, or the `major`, contains `ri`. Only join the tables for now, don't use any other conditions.
 
 #### HINTS
 
