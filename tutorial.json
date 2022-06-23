@@ -2473,7 +2473,7 @@
               "4a42873da1ad4537616ddde265668e67c1cac4ad"
             ]
           },
-          "content": "When using `GROUP BY`, any columns in the `SELECT` area must be included in the `GROUP BY` area. Other columns must by used with any of the aggregate functions (`MAX`, `AVG`, `COUNT`, etc). View the unique `major_id` values with `GROUP BY` again, but see what the lowest GPA is in each of them.",
+          "content": "When using `GROUP BY`, any columns in the `SELECT` area must be included in the `GROUP BY` area. Other columns must be used with any of the aggregate functions (`MAX`, `AVG`, `COUNT`, etc). View the unique `major_id` values with `GROUP BY` again, but see what the lowest GPA is in each of them.",
           "hints": [
             "The last query was `SELECT major_id, COUNT(*) FROM students GROUP BY major_id;`",
             "Use the `SELECT`, `MIN`, `FROM`, and `GROUP BY` keywords",
