@@ -30,3 +30,7 @@ Whenever a new version is created, add the new branch name and the changes here
 - Add `exit` flag to mocha so tests can't hang
 - Fix wrong hints on steps 1390, 1570, and 1730
 - Clarify instructions on 2200, 2230, 2250, and 2270
+
+## [v2.0.0]
+
+- Add Gitpod config
