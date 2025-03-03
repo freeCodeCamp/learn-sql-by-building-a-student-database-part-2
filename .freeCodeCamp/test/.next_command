@@ -65,3 +65,5 @@ __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 psql --help
 psql -U postgres < students.sql
 touch student_info.sh
+ls --color=auto -l
+chmod +x student_info.sh
