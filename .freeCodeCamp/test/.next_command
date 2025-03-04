@@ -81,3 +81,4 @@ code student_info.sh
 ./student_info.sh
 ./student_info.sh
 ./student_info.sh
+git remote -v
