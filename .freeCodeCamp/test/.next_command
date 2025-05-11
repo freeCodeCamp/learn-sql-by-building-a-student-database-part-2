@@ -76,3 +76,4 @@ __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 psql -U postgres < students.sql
 touch student_info.sh
 chmod +x student_info.sh
+./student_info.sh
