@@ -434,7 +434,7 @@ It included `Game Design` in the results that time. So if you want to see result
 
 ### 1450.1
 
-In your script, add an `echo` at the bottom to print the suggested info like you did before. Make sure to use double quotes where needed.
+In your script, add an `echo` at the bottom to print all the course names whose first letter is before `D` in the alphabet, as suggested by the previous line in the file. Use a similar pattern that you earlier to get and print data from the database. Make sure to use double quotes where needed.
 
 #### HINTS
 
