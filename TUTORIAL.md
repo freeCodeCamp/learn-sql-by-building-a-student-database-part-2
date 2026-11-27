@@ -1387,7 +1387,7 @@ Use `HAVING` with the last query to only show the rows with less than eight stud
 
 ### 2090.1
 
-Well done. Back in your script, add the command the print the suggested results.
+Well done. Back in your script, add the command to print the suggested results.
 
 #### HINTS
 

@@ -2662,7 +2662,7 @@
               "4795bae59a62c4ee64c38f970d5a112f4fd9001d"
             ]
           },
-          "content": "Well done. Back in your script, add the command the print the suggested results.",
+          "content": "Well done. Back in your script, add the command to print the suggested results.",
           "hints": [
             "Add `echo \"$($PSQL \"<query_here>\")\"` to the bottom of the `student_info.sh` file, except with the correct query in it",
             "If you run your script, the last echo statement should print:\n```sh\n|8|2.97\n37|6|3.38\n36|6|2.92\n41|6|3.53\n38|4|2.73\n```",
